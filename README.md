@@ -7,7 +7,7 @@ Create a directory "Rainmeter" in your Sublime Text 2 Package folder ("C:\Users\
 
 Then, either clone the package there using git: git clone https://github.com/merlinthered/sublime-rainmeter.git
 
-Or download the.sublime-package file from the [Downloads page](https://github.com/merlinthered/sublime-rainmeter/downloads)and place it in your "Installed Packages" directory ("C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages)
+Or download the.sublime-package file from the [Downloads page](https://github.com/merlinthered/sublime-rainmeter/downloads) and place it in your "Installed Packages" directory ("C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages")
 
 I'm looking into adding the package to [Package Control](http://wbond.net/sublime_packages/package_control), so installing and keeping up-to-date will be easier
 
