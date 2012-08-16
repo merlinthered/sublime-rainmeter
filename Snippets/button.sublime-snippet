@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:Button}]
+	Meter=Button
+	MeasureName=$2
+	X=${3:0}
+	Y=${4:0}
+	ButtonImage=${7:#@#Images\\${8:buttonimage}}.${9:png}
+	ButtonCommand=${10:[${11:"C:\\$12"}]}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tbutton</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Button Meter</description>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+;;====================================================
+;;  ${1:Your Text Here}
+;;====================================================
+$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>divider</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Foldable Division Header</description>
+</snippet>

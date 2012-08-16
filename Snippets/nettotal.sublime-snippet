@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:NetTotal}]
+	Measure=NetTotal
+	NetTotalSpeed=${2:0}
+	Cumulative=${3:0}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tnettotal</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>NetTotal Measure</description>
+</snippet>

@@ -1,0 +1,18 @@
+[
+	{
+		"caption": "Tools",
+		"id": "tools",
+		"children": 
+		[
+			{				
+				"caption": "Rainmeter",
+				"id": "rainmeter",
+				"children":
+				[
+					{"caption": "Indent for Code Folding", "command": "indent_rainmeter"},
+					{"caption": "New Skin...", "command": "new_skin"}
+				]
+			}
+		]
+	}
+]

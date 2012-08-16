@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+[Rainmeter]
+	Author=${1:$TM_FULLNAME}
+	Update=${2:1000}
+	MiddleMouseUpAction=${3:!Refresh #CURRENTCONFIG#}
+
+[Metadata]
+	Name=${4:${TM_FILEPATH/.*Rainmeter\/Skins\/(.*)\/[^\/]*.ini/$1/i}}
+	Version=${5:0}
+	Information=$6
+	License=${7:Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported}
+
+[Variables]
+	$8
+
+;;====================================================
+;;  Measures
+;;====================================================
+
+	$9
+
+;;====================================================
+;;  Meters
+;;====================================================
+
+	$10]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tskin</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Skin Template</description>
+</snippet>

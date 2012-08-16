@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:iTunes}]
+	Measure=Plugin
+	Plugin=iTunesPlugin
+	Command=${2:GetCurrentTrackName}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>titunes</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>iTunes Plugin</description>
+</snippet>

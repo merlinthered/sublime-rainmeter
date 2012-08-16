@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:WindowMessage}]
+	Measure=Plugin
+	Plugin=WindowMessagePlugin
+	WindowClass=${2:}
+	WindowMessage=${3:Message} ${4:wParam} ${5:lParam}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>twindowmessage</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>WindowMessage Plugin</description>
+</snippet>

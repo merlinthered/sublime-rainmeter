@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:Bitmap}]
+	Meter=Bitmap
+	MeasureName=$2
+	X=${3:0}
+	Y=${4:0}
+	BitmapImage=${7:#@#Images\\${8:bitmap}}.${9:png}
+	BitmapFrames=${10:10}
+	BitmapZeroFrame=${11:1}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tbitmap</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Bitmap Meter</description>
+</snippet>

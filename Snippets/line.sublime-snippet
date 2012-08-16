@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:Line}]
+	Meter=Line
+	MeasureName=$2
+	X=${3:0}
+	Y=${4:0}
+	W=${5:50}
+	H=${6:10}
+	LineCount=${7:1}
+	LineColor=${8:255}, ${9:255}, ${10:255}, ${11:255}
+	LineWidth=${12:1}
+	GraphOrientation=${13:Horizontal}
+	AutoScale=${14:1}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tline</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Line Meter</description>
+</snippet>

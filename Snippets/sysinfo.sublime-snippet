@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:SysInfo}]
+	Measure=Plugin
+	Plugin=SysInfo
+	SysInfoType=${2:Computer_Name}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tSysInfo</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>SysInfo Plugin</description>
+</snippet>

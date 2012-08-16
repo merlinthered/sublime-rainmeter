@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:String}]
+	Meter=String
+	${2:MeasureName=$3}
+	X=${4:0}
+	Y=${5:0}
+	W=${6:50}
+	H=${7:50}
+	${8:MeterStyle=$9}
+	${10:FontFace=${11:Arial}
+	FontSize=${12:12}
+	FontColor=${13:${14:255}, ${15:255}, ${16:255}, ${17:255}}
+	StringAlign=${18:Left}}
+	Text=${19:%1}
+	AntiAlias=${20:1}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tstring</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>String Meter</description>
+</snippet>

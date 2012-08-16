@@ -1,0 +1,10 @@
+{
+	"color_scheme": "Packages/Rainmeter/Monokai (Rainmeter).tmTheme",
+	"tab_size": 1,
+	"translate_tabes_to_spaces": true,
+	"extensions":
+	[
+		"inc",
+		"ini"
+	]
+}

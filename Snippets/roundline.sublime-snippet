@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:RoundLine}]
+	Meter=RoundLine
+	MeasureName=$2
+	X=${3:0}
+	Y=${4:0}
+	W=${5:50}
+	H=${6:50}
+	LineColor=${7:255}, ${8:255}, ${9:255}, ${10:255}
+	LineWidth=${11:1}
+	LineLength=${12:25}
+	LineStart=${13:0}
+	Solid=${14:0}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>troundline</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>RoundLine Meter</description>
+</snippet>

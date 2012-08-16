@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:AdvancedCPU}]
+	Measure=Plugin
+	Plugin=AdvancedCPU
+	${2:CPUInclude=$3}
+	${4:CPUExclude=$5}
+	TopProcess=2
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tadvancedcpu</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>AdvancedCPU Plugin</description>
+</snippet>

@@ -1,0 +1,10 @@
+[
+  { "keys": ["ctrl+alt+i"], "command": "indent_rainmeter",
+	"context": [
+		{"key": "selector", "operator": "equal", "operand": "source.rainmeter"}
+	]	
+  },
+  {
+  	"keys": ["ctrl+shift+c"],"command": "color_pick"
+  }
+]

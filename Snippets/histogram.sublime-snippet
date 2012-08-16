@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:Histogram}]
+	${2:;This is not a real histogram: http://en.wikipedia.org/wiki/Histogram}
+	Meter=Histogram
+	MeasureName=$3
+	X=${4:0}
+	Y=${5:0}
+	W=${6:50}
+	H=${7:10}
+	PrimaryColor=${8:255}, ${9:255}, ${10:255}, ${11:255}
+	GraphOrientation=${12:Horizontal}
+	AutoScale=${13:0}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>thistogram</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Histogram Meter</description>
+</snippet>

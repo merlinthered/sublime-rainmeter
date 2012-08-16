@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+[Rainmeter]
+	Author=${1:${TM_FULLNAME}}
+	Update=${2:1000}
+	MiddleMouseUpAction=${3:!Refresh #CURRENTCONFIG#}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>trainmeter</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Rainmeter Section</description>
+</snippet>

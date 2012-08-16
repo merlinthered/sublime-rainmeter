@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:InputText}]
+	Measure=Plugin
+	Plugin=InputText
+	X=${2:0}
+	Y=${3:0}
+	W=${4:100}
+	H=${5:20}
+	SolidColor=${6:${7:0},${8:0},${9:0},${10:255}}
+	FontColor=${11:${12:255},${13:255},${14:255},${15:255}}
+	FontFace=${16:Arial}
+	FontSize=${17:12}
+	DefaultValue="${18:Enter Text}"
+	FocusDismiss=${19:1}
+	Command1=${20:!WriteKeyValue "Variables" "VarName" "Value" "#CURRENTFILE#"}
+	${21:Command2=${22:!Refresh "#CURRENTCONFIG#"}}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tinputtext</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>InputText Plugin</description>
+</snippet>

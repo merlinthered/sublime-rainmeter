@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:Bar}]
+	Meter=Bar
+	MeasureName=$2
+	X=${3:0}
+	Y=${4:0}
+	W=${5:50}
+	H=${6:10}
+	BarColor=${7:255}, ${8:255}, ${9:255}, ${10:255}
+	BarOrientation=${11:Horizontal}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tbar</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Bar Meter</description>
+</snippet>

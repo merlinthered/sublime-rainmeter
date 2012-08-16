@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:Registry}]
+	Measure=Registry
+	RegHKey=${2:HKEY_CURRENT_USER}
+	RegKey=$3
+	RegValue=$4
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tregistry</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Registry Measure</description>
+</snippet>

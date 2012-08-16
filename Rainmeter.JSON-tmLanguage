@@ -1,0 +1,319 @@
+{ "name": "Rainmeter",
+  "scopeName": "source.rainmeter",
+  "fileTypes": ["ini", "inc"],
+  "foldingStartMarker": "^\\s*\\[\\s*[^\\[\\]\\s]*\\s*\\]\\s*$",
+  "foldingStopMarker": "^(?=\\s*\\[)",
+  "patterns": [
+    {  		
+      "name": "meta.comment",
+      "match": "^\\s*(;.*)$",
+      "captures": {
+          "1": { "name": "comment.line.character.rainmeter" }
+      },
+      "comment": "Comment lines"
+    },       
+    {  "name": "meta.section.variables.rainmeter",
+        "begin": "(?i)^\\s*(\\[\\s*variables\\s*\\])\\s*$",
+        "beginCaptures": {
+          "1": { "name": "entity.name.section.rainmeter" }
+        },
+        "end": "^(?=\\s*\\[)",
+        "patterns": [
+        {     
+            "name": "comment.line.character.rainmeter",
+            "match": "^\\s*;.*$",
+            "comment": "Comment lines"
+          },
+          { "name": "storage.type.option.rainmeter",
+            "match": "^\\s*(?!@include([2-9]{1,1}|[0-9]{2,})?)[^\\s=]*\\s*(?==)",
+            "comment": "All other options in a section"
+          },
+          { "include": "$self" }        
+        ],
+        "comment": "All other options in a section"
+    },        
+    {  "name": "entity.name.section.rainmeter",
+        "match": "^\\s*\\[\\s*[^\\[\\]\\s]*\\s*\\]\\s*$",
+        "comment": "Section heads"
+    },
+    {  "name": "support.variable.rainmeter",
+        "match": "(?i)(#@#|#PROGRAMDRIVE#)|(#PROGRAMPATH#)|(#SETTINGSPATH#)|(#SKINSPATH#)|(#PLUGINSPATH#)|(#ADDONSPATH#)|(#CURRENTPATH#)|(#ROOTCONFIGPATH#)|(#CURRENTFILE#)|(#CURRENTCONFIG#)|(#CURRENTSECTION#)|(#CURRENTCONFIGWIDTH#)|(#CURRENTCONFIGHEIGHT#)|(#CURRENTCONFIGX#)|(#CURRENTCONFIGY#)|(#[Pp]?WORKAREAX#)|(#[Pp]?WORKAREAY#)|(#[Pp]?WORKAREAWIDTH#)|(#[Pp]?WORKAREAHEIGHT#)|(#[PpVv]?SCREENAREAWIDTH#)|(#[PpVv]?SCREENAREAHEIGHT#)|(#CRLF#)|(#WORKAREAWIDTH#)|(#WORKAREAHEIGHT#)|(#[PpVv]?SCREENAREAX#)|(#[PpVv]?SCREENAREAY#)|(#WORKAREAX@\\d+#)|(#WORKAREAY@\\d+#)|(#WORKAREAWIDTH@\\d+#)|(#WORKAREAHEIGHT@\\d+#)|(#SCREENAREAX@\\d+#)|(#SCREENAREAY@\\d+#)|(#SCREENAREAWIDTH@\\d+#)|(#SCREENAREAHEIGHT@\\d+#)",
+        "comment": "Rainmeter builtin variables"
+    },
+    {  "name": "variable.other.static.rainmeter",
+        "match": "#(?![*][^#\\s]+[*])[^#\\s]+?#",
+        "comment": "Normal variables"
+    },
+    {  "name": "variable.other.env.rainmeter",
+        "match": "%[0-9a-zA-Z_]+?%",
+        "comment": "Environment variables"
+    },    
+    {  "name": "support.variable.userinput.rainmeter",
+        "match": "(?i)\\$Userinput\\$",
+        "comment": "Environment variables"
+    },
+    {  "name": "invalid.deprecated.bang.rainmeter",
+        "match": "(?i)!((Rainmeter((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(PLAY)|(PLAYLOOP)|(PLAYSTOP)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Update)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?)))|Execute|PluginBang)\\b",
+        "comment": "Bangs"
+    },
+    {  "name": "support.function.bang.rainmeter",
+        "match": "(?i)!((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(PLAY)|(PLAYLOOP)|(PLAYSTOP)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?|(Update)))\\b",
+        "comment": "Bangs"
+    },
+    {  "name": "variable.other.dynamic.section_variable.rainmeter",
+        "match": "(?i)\\[[^\\[\\]\\s\\\\/!#\"]*?(:(W|H|X|Y|(Min|Max)Value(:/[-+]?[0-9]*\\.?[0-9]+(e[-+]?[0-9]+)?(,\\s*[0-9]+)?)?|(/[-+]?[0-9]*\\.?[0-9]+(e[-+]?[0-9]+)?(,\\s*[0-9]+)?)|(%(,\\s*[0-9]+)?)|([0-9]+))?)\\]",
+        "captures": {
+            "1": {"name": "constant.language.section_variable.spec.rainmeter"}
+        },
+        "comment": "Section variables"
+    },
+    {  "name": "variable.other.dynamic.rainmeter",
+        "match": "\\[[^\\[\\]\\s\\\\/!#\"]*\\]",
+        "comment": "Measures used as dynamic values"
+    },
+    {  "name": "meta.option.imageflip.rainmeter",
+      "match": "(?i)^\\s*((Primary|Secondary|Both)?imageflip)\\s*=\\s*((None|Horizontal|Vertical|Both)|\"\\s*(None|Horizontal|Vertical|Both)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "3": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.imageflip.invalid.rainmeter",
+      "match": "(?i)^\\s*((Primary|Secondary|Both)?imageflip)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "7": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.measure.rainmeter",
+      "match": "(?i)^\\s*(measure)\\s*=\\s*((Script|Cpu|Memory|PhysicalMemory|SwapMemory|Uptime|Net(In|Out|Total)|FreeDiskSpace|Plugin|Registry|Time|Calc)|\"\\s*(Script|Cpu|Memory|PhysicalMemory|SwapMemory|Uptime|Net(In|Out|Total)|FreeDiskSpace|Plugin|Registry|Time|Calc)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.names.rainmeter" }
+      }
+    },
+    { "name": "meta.option.measure.invalid.rainmeter",
+      "match": "(?i)^\\s*(measure)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.RegHKey.rainmeter",
+      "match": "(?i)^\\s*(RegHKey)\\s*=\\s*((HKEY_CURRENT_(Config|USER)|HKEY_LOCAL_MACHINE|HKEY_CLASSES_ROOT|HKEY_PERFORMANCE_DATA|HKEY_DYN_DATA)|\"\\s*(HKEY_CURRENT_(Config|USER)|HKEY_LOCAL_MACHINE|HKEY_CLASSES_ROOT|HKEY_PERFORMANCE_DATA|HKEY_DYN_DATA)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.RegHKey.invalid.rainmeter",
+      "match": "(?i)^\\s*(RegHKey)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.TimeZone.rainmeter",
+      "match": "(?i)^\\s*(TimeZone)\\s*=\\s*(([+-][0-9]{1,2}\\.[0-9]{1,2})|\"\\s*([+-][0-9]{1,2}\\.[0-9]{1,2})\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.TimeZone.invalid.rainmeter",
+      "match": "(?i)^\\s*(TimeZone)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.meter.rainmeter",
+      "match": "(?i)^\\s*(meter)\\s*=\\s*((BAR|BITMAP|BUTTON|HISTOGRAM|IMAGE|LINE|ROTATOR|ROUNDLINE|STRING)|\"\\s*(BAR|BITMAP|BUTTON|HISTOGRAM|IMAGE|LINE|ROTATOR|ROUNDLINE|STRING)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.names.rainmeter" }
+      }
+    },
+    { "name": "meta.option.meter.invalid.rainmeter",
+      "match": "(?i)^\\s*(meter)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.plugin.rainmeter",
+      "match": "(?i)^\\s*(plugin)\\s*=\\s*(((Plugins\\\\)?(AdvancedCPU|CoreTemp|FolderInfo|InputText|iTunesPlugin|MediaKey|NowPlaying|PerfMon|PingPlugin|PowerPlugin|Process|QuotePlugin|RecycleManager|ResMon|SpeedFanPlugin|SysInfo|VirtualDesktops|WebParser|WiFiStatus|Win7AudioPlugin|WindowMessagePlugin)(\\.dll)?)|\"\\s*((Plugins\\\\)?(AdvancedCPU|CoreTemp|FolderInfo|InputText|iTunes|MediaKey|NowPlaying|PerfMon|Ping|Power|Process|Quote|RecycleManager|ResMon|SpeedFan|SysInfo|VirtualDesktops|WebParser|WiFiStatus|Win7Audio|WindowMessage)(\\.dll)?)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.names.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.TooltipIcon.rainmeter",
+      "match": "(?i)^\\s*(TooltipIcon)\\s*=\\s*((INFO|WARNING|ERROR|QUESTION|SHIELD)|\"\\s*(INFO|WARNING|ERROR|QUESTION|SHIELD)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.TooltipIcon.invalid.rainmeter",
+      "match": "(?i)^\\s*(TooltipIcon)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.Orientation.rainmeter",
+      "match": "(?i)^\\s*((Graph|Bar)Orientation)\\s*=\\s*((Horizontal|Vertical)|\"\\s*(Horizontal|Vertical)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "3": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.Orientation.invalid.rainmeter",
+      "match": "(?i)^\\s*((Graph|Bar)Orientation)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "7": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.bitmapalign.rainmeter",
+      "match": "(?i)^\\s*(bitmapalign)\\s*=\\s*((Left|Center|Right)|\"\\s*(Left|Center|Right)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.bitmapalign.invalid.rainmeter",
+      "match": "(?i)^\\s*(bitmapalign)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.Autoscale.rainmeter",
+      "match": "(?i)^\\s*(Autoscale)\\s*=\\s*((0|1(k)?|2(k)?)|\"\\s*(0|1(k)?|2(k)?)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.Autoscale.invalid.rainmeter",
+      "match": "(?i)^\\s*(Autoscale)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.GraphStart.rainmeter",
+      "match": "(?i)^\\s*(GraphStart)\\s*=\\s*((Left|Right)|\"\\s*(Left|Right)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.GraphStart.invalid.rainmeter",
+      "match": "(?i)^\\s*(GraphStart)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.align.rainmeter",
+      "match": "(?i)^\\s*(stringalign)\\s*=\\s*(((Left|Right|Center)(Bottom|Top|Center)?)|\"\\s*((Left|Right|Center)(Bottom|Top|Center)?)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.align.invalid.rainmeter",
+      "match": "(?i)^\\s*(stringalign)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.stringstyle.rainmeter",
+      "match": "(?i)^\\s*(stringstyle)\\s*=\\s*((Normal|Bold|Italic|Bolditalic)|\"\\s*(Normal|Bold|Italic|Bolditalic)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.stringstyle.invalid.rainmeter",
+      "match": "(?i)^\\s*(stringstyle)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.stringeffect.rainmeter",
+      "match": "(?i)^\\s*(stringeffect)\\s*=\\s*((none|shadow|border)|\"\\s*(none|shadow|border)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.stringeffect.invalid.rainmeter",
+      "match": "(?i)^\\s*(stringeffect)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "meta.option.stringcase.rainmeter",
+      "match": "(?i)^\\s*(stringcase)\\s*=\\s*((none|upper|lower|proper)|\"\\s*(none|upper|lower|proper)\\s*\")\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "2": { "name": "support.constant.option_values.rainmeter" }
+      }
+    },
+    { "name": "meta.option.stringcase.invalid.rainmeter",
+      "match": "(?i)^\\s*(stringcase)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "captures": {
+        "1": { "name": "storage.type.option.predefined.rainmeter" },
+        "6": { "name": "invalid.rainmeter" }
+      }
+    },
+    {  "name": "storage.type.option.predefined.rainmeter",
+        "match": "(?i)^\\s*(Background|BackgroundMode|BackgroundMargins|ImageCrop|Greyscale|Image(Name|Tint|Flip|Rotate|Alpha|Crop)|SolidColor(2)?|GradientAngle|beveltype|Blur|BlurRegion([2-9]{1,1}|[0-9]{2,})?|Update|TransitionUpdate|DynamicWindowSize|DragMargins|OnRefreshAction|OnCloseAction|Author|AppVersion|LocalFont([2-9]{1,1}|[0-9]{2,})?|DynamicVariables|Name|Information|Version|License|@include([2-9]{1,1}|[0-9]{2,})?|Group|Measure|InvertMeasure|Disabled|UpdateDivider|(Max|Min)Value|AverageSize|If(Above|Equal|Below)(Value|Action)|Substitute|Formula|UpdateRandom|(Low|High)Bound|Processor|Drive|Total|Label|Type|IgnoreRemovable|DiskQuota|Net(In|Out|Total)Speed|Traffic(Action|Value)|Interface|Cumulative|Plugin|Reg(HKey|Key|Value)|ScriptFile|Format|TimeZone|DaylightSavingTime|AddDaysToHours|Meter|X|Y|W|H|MeterStyle|MeasureName([2-9]{1,1}|[0-9]{2,})?|Hidden|AntiAlias|ToolTip(Text|Title|Icon|Type|Width|Hidden)|TransformationMatrix|Bar(Color|Image|Border)|(Primary|Secondary|Both)?ColorMatrix[12345]|BarOrientation|Flip|Bitmap(Image|Frames|TransitionFrames|ZeroFrame|Extend|Digits|Align|Separation)|Button(Image|Command)|SecondaryMeasureName|(Primary|Both|Secondary)(Color|Image(Crop|Tint|Flip|Rotate|Alpha)?|Greyscale)|Graph(Start|Orientation)|Path|PreserveAspectRatio|ScaleMargins|Tile|Line(Count|Width|Length|Start)|LineColor([2-9]{1,1}|[0-9]{2,})?|Scale([2-9]{1,1}|[0-9]{2,})?|HorizontalLine(s|Color)|Offset(X|Y)|(Start|Rotation)Angle|ValueRemainder|Control(Length|Start|Angle)|(Length|Start)Shift|Solid|Font(Color|Size|EffectColor|Face)|String(Align|Style|Effect|Case|)|(Pre|Post)Fix|Autoscale|Percentual|NumOfDecimals|Text|ClipString|Angle|(Left|Right|Middle)Mouse(Down|Up|DoubleClick)Action|Mouse(Over|Leave)Action|MouseActionCursor(Name)?|CPUInclude|CPUExclude|TopProcess|CoreTemp(Type|Index)|Folder|InfoType|RegExpFilter|Include(SubFolders|(Hidden|System)Files)|Command[0-9]*|DefaultValue|Password|FocusDismiss|DefaultArtwork|Player(Name|Type|Path)|TrackChangeAction|DisableLeadingZero|PerfMon(Object|Counter|Instance|Difference)|DestAddress|UpdateRate|Timeout(Value)?|PowerState|ProcessName|PathName|Separator|Subfolders|FileFilter|RecycleType|ResCountType|SpeedFan(Type|Number|Scale)|SysInfo(Type|Data)|VD(Manager|MeasureType|DesktopCount|On((De)?Activate|Change)|Desktop|Width|Height|RefreshOnUpdate)|Desktop(Name|Wallpaper)|Screenshot|Url|RegExp(Substitute)?|FinishAction|StringIndex(2)?|DecodeCharacterReference|Debug|Debug2File|Download(File)?|ErrorString|ForceReload|ProxyServer|CodePage|WiFiInfoType|WiFiIntfID|WiFiListStyle|Window(Name|Class|Message))\\s*(?==)"
+    },
+    {  "name": "support.constant.rainmeter",
+        "match": "(?i)\\b(PI|E|RANDOM)\\b",
+        "comment": "Constants used in Calc measures"
+    },
+    {  "name": "support.function.math.rainmeter",
+        "match": "(?i)\\b(((a)?(tan|sin|cos))|abs|exp|log|ln|sqrt|sgn|frac|trunc|floor|ceil|round|rad)\\s*(?=\\()",
+        "comment": "Functions used in Calc measures"
+    },
+    {  "name": "storage.type.option.rainmeter",
+        "match": "^\\s*[^\\s=]*\\s*(?==)",
+        "comment": "All other options in a section"
+    },
+    {  "name": "constant.language.format.rainmeter",
+       "match": "%[0-9]+",
+       "comment": "Format placeholder"
+    },
+    {  "name": "constant.language.format.rainmeter",
+       "match": "![0-9]*i!"
+    },
+    {  "name": "meta.numeric.color.hex.rainmeter",
+        "match": "\\b(\\h{2,2})(\\h{2,2})(\\h{2,2})(\\h{2,2})?\\b",
+        "captures": {
+          "1": {"name": "constant.numeric.color.red.hex.rainmeter"},
+          "2": {"name": "constant.numeric.color.green.hex.rainmeter"},
+          "3": {"name": "constant.numeric.color.blue.hex.rainmeter"},
+          "4": {"name": "constant.numeric.color.alpha.hex.rainmeter"}
+        }
+    },
+    {  "name": "meta.numeric.color.numeric.rainmeter",
+        "match": "\\b(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})(\\s*,\\s*(\\d{1,3}))?\\b",
+        "captures": {
+          "1": {"name": "constant.numeric.color.red.numeric.rainmeter"},
+          "2": {"name": "constant.numeric.color.green.numericrainmeter"},
+          "3": {"name": "constant.numeric.color.blue.numeric.rainmeter"},
+          "5": {"name": "constant.numeric.color.alpha.numeric.rainmeter"}
+        }
+    }
+  ],
+  "uuid": "6a53050b-d898-4e20-8fa0-c1726f4ce466"
+}

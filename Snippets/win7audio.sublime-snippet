@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:Win7Audio}]
+	Measure=Plugin
+	Plugin=Win7AudioPlugin
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>twin7audio</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Win7Audio Plugin</description>
+</snippet>

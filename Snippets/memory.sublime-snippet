@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:Memory}]
+	Measure=Memory
+	Total=${2:0}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tmemory</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Memory Meter</description>
+</snippet>

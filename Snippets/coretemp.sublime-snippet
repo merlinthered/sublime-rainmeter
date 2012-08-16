@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+[Measure${1:CoreTemp}]
+	Measure=Plugin
+	Plugin=CoreTemp
+	CoreTempType=${2:Temperature}
+	${3:CoreTempIndex=${4:0}}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcoretemp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>CoreTemp Plugin</description>
+</snippet>

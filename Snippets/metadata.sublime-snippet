@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+[Metadata]
+	Name=${1:${TM_FILEPATH/.*Rainmeter\/Skins\/(.*)\/[^\/]*.ini/$1/i}}
+	Version=${2:0}
+	Information=$3
+	License=${4:Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tmetadata</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Metadata Section</description>
+</snippet>

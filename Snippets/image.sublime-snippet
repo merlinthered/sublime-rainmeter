@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+[Meter${1:Image}]
+	Meter=Image
+	${2:MeasureName=$3}
+	${4:ImageName=${5:#@#Images\\${6:image}}.${7:png}}
+	X=${8:0}
+	Y=${9:0}
+	W=${10:50}
+	H=${11:50}
+	${12:SolidColor=${13:255}, ${14:255}, ${15:255}, ${16:255}}
+	${17:ImageTint=${18:255}, ${19:255}, ${20:255}, ${21:255}}
+	$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>timage</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.rainmeter</scope>
+	<description>Image Meter</description>
+</snippet>
