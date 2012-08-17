@@ -39,22 +39,33 @@ Sublime Text 2 supports folding indented code sections. The command `indent_rain
 
 ![Color Picker][im5]
 
+Ever wanted to quickly adjust the color of a meter but found yourself unable to imagine what a rgb color will look like in your head? No more! I have adapted the awesome [Color Picker Plugin][4] created by weslly to work with rainmeter-style hex-color definitions. Place your mose cursor in a hexadecimal color definition, or select it and hit `ctrl+shift+c`. This will open a color picker dialog and let you choose a color. If your cursor is currently not in a color definition, the hex code will be inserted at the cursor position. You can't adjust the alpha value, but it will be preserved after you chose the new color.
+
 #### New Skin
 
 ![Tools Menu][im6]
 
+The Rainmeter section in the Tools menu contains a handy command for creating a new skin. It will open a new buffer, insert a basic skin skeleton and change the syntax highlighting mode to Rainmeter. The same skeleton is also available as a snippet called `tskin`.
+
+#### Refresh Rainmeter
+
+The package includes a custom "build system" for Rainmeter, which lets you refresh the current skin with a single button press. Press `f7` or `ctrl+b` to refresh the current skin, or load it, if it's not currently active. Pressing `ctrl+shift+b` will refresh Rainmeter and all skins instead. Those commands are also available from the tools menu via `Build` and `Run`. If this is not working for you, see [After Installing}](#postinstall).
+
 ## Installation
 
-### using git:
+### using git
+
 Create a directory "Rainmeter" in your Sublime Text 2 Package folder (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages` on Windows). Then clone the package there using git: 
 
 	git clone https://github.com/merlinthered/sublime-rainmeter.git
 
-### download sublime-package:
+### by downloading sublime-package
+
 Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages`)
 
 I'm looking into adding the package to [Package Control][3], so installing and keeping up-to-date will be easier
 
+<a name='postinstall'/>
 ## After Installing
 
 If your Rainmeter is not installed in `C:\Program Files\Rainmeter`, copy the file `Rainmeter.sublime-build` into your User directory (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages\User`) and edit it, replacing the path to Rainmeter with your own install location.
@@ -84,12 +95,18 @@ The syntax definition tries to highlight all common language constructs properly
 * Tools > Rainmeter > New Skin...
 
 ## Acknowledgements
-[Color Picker plugin by weslly][4], which I tweaked to work with Rainmeter
+* [Color Picker plugin by weslly][4], which I tweaked to work with Rainmeter
+* [RainLexer by poiru][5], which is another awesome tool for developing Rainmeter skins, for the inspiration and one of the color schemes.
+* [Monokai Color Scheme by Wimer Hazenberg][6], for providing such an amazing composition of colors.
+* [The Rainmeter Community][7] for being awesome and testing this package.
 
 [1]: http://www.sublimetext.com/ "Sublime Text 2"
 [2]: https://github.com/merlinthered/sublime-rainmeter/downloads "Downloads page"
 [3]: http://wbond.net/sublime_packages/package_control "Package Control"
 [4]: https://github.com/weslly/ColorPicker "Color Picker"
+[5]: https://github.com/poiru/rainlexer "RainLexer"
+[6]: http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/ "Monokai"
+[7]: http://www.rainmeter.net/ "Rainmeter"
 
 [im1]: http://i.imgur.com/XszdQ.png "Color Schemes"
 [im2]: http://i.imgur.com/3rDom.png "Code Completion"
