@@ -78,8 +78,8 @@ The syntax definition tries to highlight all common language constructs properly
 
 ### Used Commands
 * indent_rainmeter
-* color_pick
 * new_skin
+* color_pick
 
 ### Used Command Palette Commands
 * Rainmeter: Indent for Code Folding
