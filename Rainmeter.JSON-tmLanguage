@@ -61,14 +61,14 @@
         "comment": "Bangs"
     },
     {  "name": "variable.other.dynamic.section_variable.rainmeter",
-        "match": "(?i)\\[[^\\[\\]\\s\\\\/!#\"]*?(:(W|H|X|Y|(Min|Max)Value(:/[-+]?[0-9]*\\.?[0-9]+(e[-+]?[0-9]+)?(,\\s*[0-9]+)?)?|(/[-+]?[0-9]*\\.?[0-9]+(e[-+]?[0-9]+)?(,\\s*[0-9]+)?)|(%(,\\s*[0-9]+)?)|([0-9]+))?)\\]",
+        "match": "(?i)\\[[^\\[\\]\\s\\\\/!#\"%\\$]*?(:(W|H|X|Y|(Min|Max)Value(:/[-+]?[0-9]*\\.?[0-9]+(e[-+]?[0-9]+)?(,\\s*[0-9]+)?)?|(/[-+]?[0-9]*\\.?[0-9]+(e[-+]?[0-9]+)?(,\\s*[0-9]+)?)|(%(,\\s*[0-9]+)?)|([0-9]+))?)\\]",
         "captures": {
             "1": {"name": "constant.language.section_variable.spec.rainmeter"}
         },
         "comment": "Section variables"
     },
     {  "name": "variable.other.dynamic.rainmeter",
-        "match": "\\[[^\\[\\]\\s\\\\/!#\"]*\\]",
+        "match": "\\[[^\\[\\]\\s\\\\/!#\"%\\$]*\\]",
         "comment": "Measures used as dynamic values"
     },
     {  "name": "meta.option.imageflip.rainmeter",
