@@ -79,10 +79,10 @@
       }
     },
     { "name": "meta.option.imageflip.invalid.rainmeter",
-      "match": "(?i)^\\s*((Primary|Secondary|Both)?imageflip)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*((Primary|Secondary|Both)?imageflip)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "7": { "name": "invalid.rainmeter" }
+        "4": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.measure.rainmeter",
@@ -93,10 +93,10 @@
       }
     },
     { "name": "meta.option.measure.invalid.rainmeter",
-      "match": "(?i)^\\s*(measure)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(measure)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.RegHKey.rainmeter",
@@ -107,10 +107,10 @@
       }
     },
     { "name": "meta.option.RegHKey.invalid.rainmeter",
-      "match": "(?i)^\\s*(RegHKey)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(RegHKey)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.TimeZone.rainmeter",
@@ -121,10 +121,10 @@
       }
     },
     { "name": "meta.option.TimeZone.invalid.rainmeter",
-      "match": "(?i)^\\s*(TimeZone)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(TimeZone)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.meter.rainmeter",
@@ -135,10 +135,10 @@
       }
     },
     { "name": "meta.option.meter.invalid.rainmeter",
-      "match": "(?i)^\\s*(meter)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(meter)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.plugin.rainmeter",
@@ -156,10 +156,10 @@
       }
     },
     { "name": "meta.option.TooltipIcon.invalid.rainmeter",
-      "match": "(?i)^\\s*(TooltipIcon)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(TooltipIcon)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$|.*\\.ico\\s*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.Orientation.rainmeter",
@@ -170,7 +170,7 @@
       }
     },
     { "name": "meta.option.Orientation.invalid.rainmeter",
-      "match": "(?i)^\\s*((Graph|Bar)Orientation)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*((Graph|Bar)Orientation)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
         "7": { "name": "invalid.rainmeter" }
@@ -184,10 +184,10 @@
       }
     },
     { "name": "meta.option.bitmapalign.invalid.rainmeter",
-      "match": "(?i)^\\s*(bitmapalign)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(bitmapalign)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.Autoscale.rainmeter",
@@ -198,10 +198,10 @@
       }
     },
     { "name": "meta.option.Autoscale.invalid.rainmeter",
-      "match": "(?i)^\\s*(Autoscale)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(Autoscale)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.GraphStart.rainmeter",
@@ -212,10 +212,10 @@
       }
     },
     { "name": "meta.option.GraphStart.invalid.rainmeter",
-      "match": "(?i)^\\s*(GraphStart)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(GraphStart)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.align.rainmeter",
@@ -226,10 +226,10 @@
       }
     },
     { "name": "meta.option.align.invalid.rainmeter",
-      "match": "(?i)^\\s*(stringalign)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(stringalign)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.stringstyle.rainmeter",
@@ -240,10 +240,10 @@
       }
     },
     { "name": "meta.option.stringstyle.invalid.rainmeter",
-      "match": "(?i)^\\s*(stringstyle)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(stringstyle)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.stringeffect.rainmeter",
@@ -254,10 +254,10 @@
       }
     },
     { "name": "meta.option.stringeffect.invalid.rainmeter",
-      "match": "(?i)^\\s*(stringeffect)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(stringeffect)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "meta.option.stringcase.rainmeter",
@@ -268,10 +268,10 @@
       }
     },
     { "name": "meta.option.stringcase.invalid.rainmeter",
-      "match": "(?i)^\\s*(stringcase)\\s*=(?!(\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*$)|(\\s*\"\\s*(#(?![*][^#\\s]+[*])[^#\\s]+?#)+\\s*\"\\s*$))(.*)\\s*$",
+      "match": "(?i)^\\s*(stringcase)\\s*=\\s*(?!(.*#.*#.*$|.*\\[.*\\].*$))(.*)\\s*$",
       "captures": {
         "1": { "name": "storage.type.option.predefined.rainmeter" },
-        "6": { "name": "invalid.rainmeter" }
+        "3": { "name": "invalid.rainmeter" }
       }
     },
     {  "name": "storage.type.option.predefined.rainmeter",

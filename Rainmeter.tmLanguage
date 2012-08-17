@@ -179,14 +179,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>7</key>
+				<key>4</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*((Primary|Secondary|Both)?imageflip)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*((Primary|Secondary|Both)?imageflip)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.imageflip.invalid.rainmeter</string>
 		</dict>
@@ -217,14 +217,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(measure)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(measure)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.measure.invalid.rainmeter</string>
 		</dict>
@@ -255,14 +255,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(RegHKey)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(RegHKey)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.RegHKey.invalid.rainmeter</string>
 		</dict>
@@ -293,14 +293,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(TimeZone)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(TimeZone)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.TimeZone.invalid.rainmeter</string>
 		</dict>
@@ -331,14 +331,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(meter)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(meter)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.meter.invalid.rainmeter</string>
 		</dict>
@@ -388,14 +388,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(TooltipIcon)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(TooltipIcon)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$|.*\.ico\s*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.TooltipIcon.invalid.rainmeter</string>
 		</dict>
@@ -433,7 +433,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*((Graph|Bar)Orientation)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*((Graph|Bar)Orientation)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.Orientation.invalid.rainmeter</string>
 		</dict>
@@ -464,14 +464,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(bitmapalign)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(bitmapalign)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.bitmapalign.invalid.rainmeter</string>
 		</dict>
@@ -502,14 +502,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(Autoscale)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(Autoscale)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.Autoscale.invalid.rainmeter</string>
 		</dict>
@@ -540,14 +540,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(GraphStart)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(GraphStart)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.GraphStart.invalid.rainmeter</string>
 		</dict>
@@ -578,14 +578,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(stringalign)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(stringalign)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.align.invalid.rainmeter</string>
 		</dict>
@@ -616,14 +616,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(stringstyle)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(stringstyle)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.stringstyle.invalid.rainmeter</string>
 		</dict>
@@ -654,14 +654,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(stringeffect)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(stringeffect)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.stringeffect.invalid.rainmeter</string>
 		</dict>
@@ -692,14 +692,14 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>6</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>invalid.rainmeter</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)^\s*(stringcase)\s*=(?!(\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*$)|(\s*"\s*(#(?![*][^#\s]+[*])[^#\s]+?#)+\s*"\s*$))(.*)\s*$</string>
+			<string>(?i)^\s*(stringcase)\s*=\s*(?!(.*#.*#.*$|.*\[.*\].*$))(.*)\s*$</string>
 			<key>name</key>
 			<string>meta.option.stringcase.invalid.rainmeter</string>
 		</dict>
