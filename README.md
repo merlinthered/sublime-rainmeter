@@ -1,6 +1,6 @@
 # sublime-rainmeter
 
-This is a package for [Sublime Text 2][1], adding support for Rainmeter Skin development.
+This package for [Sublime Text 2][1] makes developing Rainmeter skins even more fun.
 
 ## Features
 
@@ -12,13 +12,13 @@ Syntax highlighting is turned on by default for files with the .ini and .inc ext
 
 There are four builtin color schemes you can choose from by copying `Rainmeter.sublime-settings` from the Rainmeter package directory to your User directory and changing the path to the .tmTheme file.
 
-![Color Schemes][im3] 
+![Color Schemes][im2] 
 
 If a certain file type doesn't open with Rainmeter highlighting even though you want it to, select View > Syntax > Open all with current extension as... > Rainmeter.
 
 ### Code Completion
 
-![Code Completion][im2]
+![Code Completion][im3]
 
 Code completion is activated by default. While typing, it will suggest completions from a list of options, values, builtin variables and more. When auto-completing a bang, the required and optional (in braces) parameters are also added, and you can cycle through them by pressing `tab` or `shift+tab`.
 
@@ -92,8 +92,8 @@ The syntax definition tries to highlight all common language constructs properly
 [4]: https://github.com/weslly/ColorPicker "Color Picker"
 
 [im1]:
-[im2]:
-[im3]:
+[im2]: http://i.imgur.com/XszdQ.png "Color Schemes"
+[im3]: 
 [im4]:
 [im5]:
 [im6]:
