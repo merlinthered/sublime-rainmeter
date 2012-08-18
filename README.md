@@ -55,7 +55,7 @@ The package includes a custom "build system" for Rainmeter, which lets you refre
 
 ### using git
 
-Create a directory "Rainmeter" in your Sublime Text 2 Package folder (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages` on Windows). Then clone the package there using git: 
+Browse to your Sublime Text 2 Package folder (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages` on Windows). Then clone the package there using git: 
 
 	git clone https://github.com/merlinthered/sublime-rainmeter.git Rainmeter
 
