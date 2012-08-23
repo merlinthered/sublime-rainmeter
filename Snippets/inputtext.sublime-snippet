@@ -13,7 +13,7 @@
 	FontSize=${17:12}
 	DefaultValue="${18:Enter Text}"
 	FocusDismiss=${19:1}
-	Command1=${20:!WriteKeyValue "Variables" "VarName" "Value" "#CURRENTFILE#"}
+	Command1=${20:!WriteKeyValue "Variables" "VarName" "Value" "#CURRENTPATH##CURRENTFILE#"}
 	${21:Command2=${22:!Refresh "#CURRENTCONFIG#"}}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -4,7 +4,6 @@
 	Measure=Plugin
 	Plugin=WebParser
 	Url=${2:http://www.example.com}
-	${3:RegExp=${4:"(?siU).*<item>.*<title>(.*)</title>.*<link>(.*)</link>"}}
 	StringIndex=${5:0}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

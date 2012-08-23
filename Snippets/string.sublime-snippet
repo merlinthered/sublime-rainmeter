@@ -7,12 +7,12 @@
 	Y=${5:0}
 	W=${6:50}
 	H=${7:50}
-	${8:MeterStyle=$9}
-	${10:FontFace=${11:Arial}
-	FontSize=${12:12}
-	FontColor=${13:${14:255}, ${15:255}, ${16:255}, ${17:255}}
-	StringAlign=${18:Left}}
-	Text=${19:%1}
+	Text=${8:%1}
+	${9:MeterStyle=$10}
+	${11:FontFace=${12:Arial}
+	FontSize=${13:12}
+	FontColor=${14:${15:255}, ${16:255}, ${17:255}, ${18:255}}
+	StringAlign=${19:Left}}
 	AntiAlias=${20:1}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

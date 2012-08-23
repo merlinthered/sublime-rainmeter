@@ -10,7 +10,6 @@
 	H=${7:10}
 	PrimaryColor=${8:255}, ${9:255}, ${10:255}, ${11:255}
 	GraphOrientation=${12:Horizontal}
-	AutoScale=${13:0}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>thistogram</tabTrigger>

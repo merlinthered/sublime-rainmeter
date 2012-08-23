@@ -7,11 +7,9 @@
 	Y=${4:0}
 	W=${5:50}
 	H=${6:10}
-	LineCount=${7:1}
-	LineColor=${8:255}, ${9:255}, ${10:255}, ${11:255}
-	LineWidth=${12:1}
-	GraphOrientation=${13:Horizontal}
-	AutoScale=${14:1}
+	LineColor=${7:255}, ${8:255}, ${9:255}, ${10:255}
+	LineWidth=${11:1}
+	GraphOrientation=${12:Horizontal}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tline</tabTrigger>
