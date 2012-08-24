@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Nexus (Rainmeter)</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<!-- FROM NEXUS -->
+		        <key>background</key>
+		        <string>#2B2B2B</string>
+		        <key>caret</key>
+		        <string>#FFFFFF</string>
+		        <key>foreground</key>
+		        <string>#E6E1DC</string>
+		        <key>invisibles</key>
+		        <string>#404040</string>
+		        <key>lineHighlight</key>
+		        <string>#333435</string>
+		        <key>selection</key>
+		        <string>#5A647EE0</string>
+
+		        <!-- OTHER -->
+				<key>findHighlight</key>
+				<string>#FFE792</string>
+				<key>findHighlightForeground</key>
+				<string>#000000</string>
+				<key>selectionBorder</key>
+				<string>#222218</string>
+				<key>activeGuide</key>
+				<string>#9D550FB0</string>
+
+				<key>bracketsForeground</key>
+				<string>#F8F8F2A5</string>
+				<key>bracketsOptions</key>
+				<string>underline</string>
+
+				<key>bracketContentsForeground</key>
+				<string>#F8F8F2A5</string>
+				<key>bracketContentsOptions</key>
+				<string>underline</string>
+
+				<key>tagsOptions</key>
+				<string>stippled_underline</string>
+			</dict>
+		</dict>
+
+		<!-- FOR RAINMETER -->
+
+		<!-- SECTIONS & SECTION VARIABLES -->
+		<!-- Color: Yellow (#FFC66D)      -->
+
+		<dict>
+			<key>name</key>
+			<string>Section Heading</string>
+			<key>scope</key>
+			<string>entity.name.section.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#FFC66D</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Dynamic Variables</string>
+			<key>scope</key>
+			<string>variable.other.dynamic.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FFC66D</string>
+			</dict>
+		</dict>	
+
+		<dict>
+			<key>name</key>
+			<string>Section Variables</string>
+			<key>scope</key>
+			<string>variable.other.dynamic.section_variable.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FFC66D</string>
+			</dict>
+		</dict>	
+
+		<!-- KEYS & SECTION VARIABLE OPTIONS -->
+		<!-- Color: Orange (#CC7833)         -->
+
+		<dict>
+			<key>name</key>
+			<string>Predefined Keys</string>
+			<key>scope</key>
+			<string>storage.type.option.predefined.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#CC7833</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Custom Keys</string>
+			<key>scope</key>
+			<string>storage.type.option.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#CC7833</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Section Variable Specifier</string>
+			<key>scope</key>
+			<string>constant.language.section_variable.spec.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#CC7833</string>
+			</dict>
+		</dict>
+
+		<!-- VARIABLES             -->
+		<!-- Color: Blue (#6D9CBE) -->
+
+		<dict>
+			<key>name</key>
+			<string>Normal Variables</string>
+			<key>scope</key>
+			<string>variable.other.static.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#6D9CBE</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Built-In Variables</string>
+			<key>scope</key>
+			<string>support.variable.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#6D9CBE</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Environment Variables</string>
+			<key>scope</key>
+			<string>variable.other.env.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#6D9CBE</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Userinput Variable</string>
+			<key>scope</key>
+			<string>support.variable.userinput.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#6D9CBE</string>
+			</dict>
+		</dict>
+
+		<!-- BANGS & FUNCTIONS -->
+		<!-- Color: Red (#DA4939) -->
+
+		<dict>
+			<key>name</key>
+			<string>Bangs</string>
+			<key>scope</key>
+			<string>support.function.bang.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#DA4939</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Math Functions</string>
+			<key>scope</key>
+			<string>support.function.math.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#DA4939</string>
+			</dict>
+		</dict>
+
+		<!-- VALUES, CONSTANT & PREDEFINED -->
+		<!-- Color: Green (#A5C261) -->
+
+		<dict>
+			<key>name</key>
+			<string>Meter, Measure and Plugin Names</string>
+			<key>scope</key>
+			<string>support.constant.names.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#A5C261</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Predefined Option Values</string>
+			<key>scope</key>
+			<string>support.constant.option_values.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#E6E1DC</string>
+				<!-- Uncolored. -->
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Mathematical Constants</string>
+			<key>scope</key>
+			<string>support.constant.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A5C261</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Formatting Literals</string>
+			<key>scope</key>
+			<string>constant.language.format.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A5C261</string>
+			</dict>
+		</dict>
+
+		<!-- RGBA OPTIONS -->
+
+		<dict>
+			<key>name</key>
+			<string>Red in Color Definition</string>
+			<key>scope</key>
+			<string>constant.numeric.color.red</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#DA4939</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Green in Color Definition</string>
+			<key>scope</key>
+			<string>constant.numeric.color.green</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A5C261</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Blue in Color Definition</string>
+			<key>scope</key>
+			<string>constant.numeric.color.blue</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#6D9CBE</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Alpha in Color Definition</string>
+			<key>scope</key>
+			<string>constant.numeric.color.alpha</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#aaaaaa</string>
+			</dict>
+		</dict>
+
+		<!-- INVALID & DEPRECATED VALUES -->
+		
+		<dict>
+			<key>name</key>
+			<string>Invalid Values</string>
+			<key>scope</key>
+			<string>invalid.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F8F8F2</string>
+				<key>background</key>
+				<string>#f80800</string>
+
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Deprecated Bangs</string>
+			<key>scope</key>
+			<string>invalid.deprecated.bang</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string></string>
+				<key>background</key>
+				<string>#f83810</string>
+			</dict>
+		</dict>
+
+		<!-- GENERAL STYLES (FROM NEXUS) -->
+
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#75715e</string>
+				<!-- <string>#BC9458</string> -->
+				<!-- Original Nexus comment color (orange-ish). -->
+			</dict>
+		</dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Source</string>
+	      <key>scope</key>
+	      <string>source</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>background</key>
+	        <string>#232323</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Keyword</string>
+	      <key>scope</key>
+	      <string>keyword, storage</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#CC7833</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Function (definition)</string>
+	      <key>scope</key>
+	      <string>entity.name.function, keyword.other.name-of-parameter.objc</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#FFC66D</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Class (definition)</string>
+	      <key>scope</key>
+	      <string>entity.name</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>foreground</key>
+	        <string>#FFFFFF</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Number</string>
+	      <key>scope</key>
+	      <string>constant.numeric</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#A5C261</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Variable</string>
+	      <key>scope</key>
+	      <string>variable.language, variable.other</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#D0D0FF</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Constant</string>
+	      <key>scope</key>
+	      <string>constant</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#6D9CBE</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Constant (other variable)</string>
+	      <key>scope</key>
+	      <string>variable.other.constant</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>foreground</key>
+	        <string>#DA4939</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Constant (built-in)</string>
+	      <key>scope</key>
+	      <string>constant.language</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#6E9CBE</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>String</string>
+	      <key>scope</key>
+	      <string>string</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#A5C261</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Library function</string>
+	      <key>scope</key>
+	      <string>support.function</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#DA4939</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Library type</string>
+	      <key>scope</key>
+	      <string>support.type</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>foreground</key>
+	        <string>#6E9CBE</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Library constant</string>
+	      <key>scope</key>
+	      <string>support.constant</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>foreground</key>
+	        <string>#A5C261</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Markup tag</string>
+	      <key>scope</key>
+	      <string>meta.tag, declaration.tag, entity.name.tag, entity.other.attribute-name</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#E8BF6A</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Invalid</string>
+	      <key>scope</key>
+	      <string>invalid</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>background</key>
+	        <string>#990000</string>
+	        <key>foreground</key>
+	        <string>#FFFFFF</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>String interpolation</string>
+	      <key>scope</key>
+	      <string>constant.character.escaped, constant.character.escape, string source, string source.ruby</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>fontStyle</key>
+	        <string></string>
+	        <key>foreground</key>
+	        <string>#519F50</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Diff Add</string>
+	      <key>scope</key>
+	      <string>markup.inserted</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>background</key>
+	        <string>#144212</string>
+	        <key>foreground</key>
+	        <string>#E6E1DC</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Diff Remove</string>
+	      <key>scope</key>
+	      <string>markup.deleted</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>background</key>
+	        <string>#660000</string>
+	        <key>foreground</key>
+	        <string>#E6E1DC</string>
+	      </dict>
+	    </dict>
+	    <dict>
+	      <key>name</key>
+	      <string>Diff Header</string>
+	      <key>scope</key>
+	      <string>meta.diff.header, meta.separator.diff, meta.diff.index, meta.diff.range</string>
+	      <key>settings</key>
+	      <dict>
+	        <key>background</key>
+	        <string>#2F33AB</string>
+	      </dict>
+	    </dict>
+
+	</array>
+	<key>uuid</key>
+	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>
+</dict>
+</plist>
