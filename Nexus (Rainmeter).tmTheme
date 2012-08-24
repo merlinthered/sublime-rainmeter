@@ -114,6 +114,20 @@
 
 		<dict>
 			<key>name</key>
+			<string>Predefined Keys</string>
+			<key>scope</key>
+			<string>storage.type.option.predefined.include.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold italic</string>
+				<key>foreground</key>
+				<string>#CC7833</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
 			<string>Custom Keys</string>
 			<key>scope</key>
 			<string>storage.type.option.rainmeter</string>
