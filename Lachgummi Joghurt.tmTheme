@@ -103,6 +103,20 @@
 
 		<dict>
 			<key>name</key>
+			<string>Predefined Keys</string>
+			<key>scope</key>
+			<string>storage.type.option.predefined.include.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold italic</string>
+				<key>foreground</key>
+				<string>#f0ec86</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
 			<string>Builtin Variables</string>
 			<key>scope</key>
 			<string>support.variable.rainmeter</string>

@@ -140,7 +140,7 @@
 			<key>comment</key>
 			<string>Section variables</string>
 			<key>match</key>
-			<string>(?i)\[[^\[\]\s\\/!#"]*?(:(W|H|X|Y|(Min|Max)Value(:/[-+]?[0-9]*\.?[0-9]+(e[-+]?[0-9]+)?(,\s*[0-9]+)?)?|(/[-+]?[0-9]*\.?[0-9]+(e[-+]?[0-9]+)?(,\s*[0-9]+)?)|(%(,\s*[0-9]+)?)|([0-9]+))?)\]</string>
+			<string>(?i)\[[^\[\]\s\\/!#"%\$]*?(:(W|H|X|Y|(Min|Max)Value(:/[-+]?[0-9]*\.?[0-9]+(e[-+]?[0-9]+)?(,\s*[0-9]+)?)?|(/[-+]?[0-9]*\.?[0-9]+(e[-+]?[0-9]+)?(,\s*[0-9]+)?)|(%(,\s*[0-9]+)?)|([0-9]+))?)\]</string>
 			<key>name</key>
 			<string>variable.other.dynamic.section_variable.rainmeter</string>
 		</dict>
@@ -148,7 +148,7 @@
 			<key>comment</key>
 			<string>Measures used as dynamic values</string>
 			<key>match</key>
-			<string>\[[^\[\]\s\\/!#"]*\]</string>
+			<string>\[[^\[\]\s\\/!#"%\$]*\]</string>
 			<key>name</key>
 			<string>variable.other.dynamic.rainmeter</string>
 		</dict>
@@ -705,7 +705,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)^\s*(Background|BackgroundMode|BackgroundMargins|ImageCrop|Greyscale|Image(Name|Tint|Flip|Rotate|Alpha|Crop)|SolidColor(2)?|GradientAngle|beveltype|Blur|BlurRegion([2-9]{1,1}|[0-9]{2,})?|Update|TransitionUpdate|DynamicWindowSize|DragMargins|OnRefreshAction|OnCloseAction|Author|AppVersion|LocalFont([2-9]{1,1}|[0-9]{2,})?|DynamicVariables|Name|Information|Version|License|@include([2-9]{1,1}|[0-9]{2,})?|Group|Measure|InvertMeasure|Disabled|UpdateDivider|(Max|Min)Value|AverageSize|If(Above|Equal|Below)(Value|Action)|Substitute|Formula|UpdateRandom|(Low|High)Bound|Processor|Drive|Total|Label|Type|IgnoreRemovable|DiskQuota|Net(In|Out|Total)Speed|Traffic(Action|Value)|Interface|Cumulative|Plugin|Reg(HKey|Key|Value)|ScriptFile|Format|TimeZone|DaylightSavingTime|AddDaysToHours|Meter|X|Y|W|H|MeterStyle|MeasureName([2-9]{1,1}|[0-9]{2,})?|Hidden|AntiAlias|ToolTip(Text|Title|Icon|Type|Width|Hidden)|TransformationMatrix|Bar(Color|Image|Border)|(Primary|Secondary|Both)?ColorMatrix[12345]|BarOrientation|Flip|Bitmap(Image|Frames|TransitionFrames|ZeroFrame|Extend|Digits|Align|Separation)|Button(Image|Command)|SecondaryMeasureName|(Primary|Both|Secondary)(Color|Image(Crop|Tint|Flip|Rotate|Alpha)?|Greyscale)|Graph(Start|Orientation)|Path|PreserveAspectRatio|ScaleMargins|Tile|Line(Count|Width|Length|Start)|LineColor([2-9]{1,1}|[0-9]{2,})?|Scale([2-9]{1,1}|[0-9]{2,})?|HorizontalLine(s|Color)|Offset(X|Y)|(Start|Rotation)Angle|ValueRemainder|Control(Length|Start|Angle)|(Length|Start)Shift|Solid|Font(Color|Size|EffectColor|Face)|String(Align|Style|Effect|Case|)|(Pre|Post)Fix|Autoscale|Percentual|NumOfDecimals|Text|ClipString|Angle|(Left|Right|Middle)Mouse(Down|Up|DoubleClick)Action|Mouse(Over|Leave)Action|MouseActionCursor(Name)?|CPUInclude|CPUExclude|TopProcess|CoreTemp(Type|Index)|Folder|InfoType|RegExpFilter|Include(SubFolders|(Hidden|System)Files)|Command[0-9]*|DefaultValue|Password|FocusDismiss|DefaultArtwork|Player(Name|Type|Path)|TrackChangeAction|DisableLeadingZero|PerfMon(Object|Counter|Instance|Difference)|DestAddress|UpdateRate|Timeout(Value)?|PowerState|ProcessName|PathName|Separator|Subfolders|FileFilter|RecycleType|ResCountType|SpeedFan(Type|Number|Scale)|SysInfo(Type|Data)|VD(Manager|MeasureType|DesktopCount|On((De)?Activate|Change)|Desktop|Width|Height|RefreshOnUpdate)|Desktop(Name|Wallpaper)|Screenshot|Url|RegExp(Substitute)?|FinishAction|StringIndex(2)?|DecodeCharacterReference|Debug|Debug2File|Download(File)?|ErrorString|ForceReload|ProxyServer|CodePage|WiFiInfoType|WiFiIntfID|WiFiListStyle|Window(Name|Class|Message))\s*(?==)</string>
+			<string>(?i)\s*@include([2-9]{1,1}|[0-9]{2,})?\s*(?==)</string>
+			<key>name</key>
+			<string>storage.type.option.predefined.include.rainmeter</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)^\s*(Background|BackgroundMode|BackgroundMargins|ImageCrop|Greyscale|Image(Name|Tint|Flip|Rotate|Alpha|Crop)|SolidColor(2)?|GradientAngle|beveltype|Blur|BlurRegion([2-9]{1,1}|[0-9]{2,})?|Update|TransitionUpdate|DynamicWindowSize|DragMargins|OnRefreshAction|OnCloseAction|Author|AppVersion|LocalFont([2-9]{1,1}|[0-9]{2,})?|DynamicVariables|Name|Information|Version|License|Group|Measure|InvertMeasure|Disabled|UpdateDivider|(Max|Min)Value|AverageSize|If(Above|Equal|Below)(Value|Action)|Substitute|Formula|UpdateRandom|(Low|High)Bound|Processor|Drive|Total|Label|Type|IgnoreRemovable|DiskQuota|Net(In|Out|Total)Speed|Traffic(Action|Value)|Interface|Cumulative|Plugin|Reg(HKey|Key|Value)|ScriptFile|Format|TimeZone|DaylightSavingTime|AddDaysToHours|Meter|X|Y|W|H|MeterStyle|MeasureName([2-9]{1,1}|[0-9]{2,})?|Hidden|AntiAlias|ToolTip(Text|Title|Icon|Type|Width|Hidden)|TransformationMatrix|Bar(Color|Image|Border)|(Primary|Secondary|Both)?ColorMatrix[12345]|BarOrientation|Flip|Bitmap(Image|Frames|TransitionFrames|ZeroFrame|Extend|Digits|Align|Separation)|Button(Image|Command)|SecondaryMeasureName|(Primary|Both|Secondary)(Color|Image(Crop|Tint|Flip|Rotate|Alpha)?|Greyscale)|Graph(Start|Orientation)|Path|PreserveAspectRatio|ScaleMargins|Tile|Line(Count|Width|Length|Start)|LineColor([2-9]{1,1}|[0-9]{2,})?|Scale([2-9]{1,1}|[0-9]{2,})?|HorizontalLine(s|Color)|Offset(X|Y)|(Start|Rotation)Angle|ValueRemainder|Control(Length|Start|Angle)|(Length|Start)Shift|Solid|Font(Color|Size|EffectColor|Face)|String(Align|Style|Effect|Case|)|(Pre|Post)Fix|Autoscale|Percentual|NumOfDecimals|Text|ClipString|Angle|(Left|Right|Middle)Mouse(Down|Up|DoubleClick)Action|Mouse(Over|Leave)Action|MouseActionCursor(Name)?|CPUInclude|CPUExclude|TopProcess|CoreTemp(Type|Index)|Folder|InfoType|RegExpFilter|Include(SubFolders|(Hidden|System)Files)|Command[0-9]*|DefaultValue|Password|FocusDismiss|DefaultArtwork|Player(Name|Type|Path)|TrackChangeAction|DisableLeadingZero|PerfMon(Object|Counter|Instance|Difference)|DestAddress|UpdateRate|Timeout(Value)?|PowerState|ProcessName|PathName|Separator|Subfolders|FileFilter|RecycleType|ResCountType|SpeedFan(Type|Number|Scale)|SysInfo(Type|Data)|VD(Manager|MeasureType|DesktopCount|On((De)?Activate|Change)|Desktop|Width|Height|RefreshOnUpdate)|Desktop(Name|Wallpaper)|Screenshot|Url|RegExp(Substitute)?|FinishAction|StringIndex(2)?|DecodeCharacterReference|Debug|Debug2File|Download(File)?|ErrorString|ForceReload|ProxyServer|CodePage|WiFiInfoType|WiFiIntfID|WiFiListStyle|Window(Name|Class|Message))\s*(?==)</string>
 			<key>name</key>
 			<string>storage.type.option.predefined.rainmeter</string>
 		</dict>
