@@ -128,6 +128,20 @@
 
 		<dict>
 			<key>name</key>
+			<string>Equal Sign in "Key=Value"</string>
+			<key>scope</key>
+			<string>keyword.operator.option.equal.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FFC66D</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
 			<string>Custom Keys</string>
 			<key>scope</key>
 			<string>storage.type.option.rainmeter</string>

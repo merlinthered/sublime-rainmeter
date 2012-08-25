@@ -84,11 +84,25 @@
 			<key>name</key>
 			<string>Predefined Keys</string>
 			<key>scope</key>
-			<string>storage.type.option.predefined.rainmeter</string>
+			<string>storage.type.option.predefined.include.rainmeter</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string>bold italic</string>
+				<key>foreground</key>
+				<string>#0000A0</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Equal Sign in "Key=Value"</string>
+			<key>scope</key>
+			<string>keyword.operator.option.equal.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
 				<key>foreground</key>
 				<string>#0000A0</string>
 			</dict>

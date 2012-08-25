@@ -28,7 +28,7 @@ You can see all available snippets by looking in the `Snippets` folder in the Ra
 
 ### Tools
 
-<a name='AutomaticIndentation'/>
+<a name='AutomaticIndentation'></a>
 #### Code Folding
 
 ![Code Folding][im4]
@@ -65,7 +65,7 @@ Download the .sublime-package file from the [Downloads page][2] and place it in 
 
 I'm looking into adding the package to [Package Control][3], so installing and keeping up-to-date will be easier
 
-<a name='postinstall'/>
+<a name='postinstall'></a>
 ## After Installing
 
 If your Rainmeter is not installed in `C:\Program Files\Rainmeter`, copy the file `Rainmeter.sublime-build` into your User directory (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages\User`) and edit it, replacing the path to Rainmeter with your own install location.
@@ -73,6 +73,10 @@ If your Rainmeter is not installed in `C:\Program Files\Rainmeter`, copy the fil
 ## Issues
 
 The syntax definition tries to highlight all common language constructs properly. It might fail in some cases, where something is highlighted even though it's not supposed to be. One prominent example is that every number that has exactly 6 or 8 digits being highlighted like a hexadecimal color definition. I chose this explicitly because I think identifying the different parts in a color definition is more important than some incorrectly colored numbers. In most other cases, wrong highlighting is due to the inherent ambiguity in Rainmeter syntax. If you encounter one of those cases, don't hesitate to contact me, especially if you think you know how to fix it.
+
+## Hints for Color Scheme Designers
+
+You can see all the different classes the syntax defines by looking into `Rainmeter.JSON-tmLanguage`. Perhaps even easier is copying the rainmeter-specific part from one of the included color schemes (it's pretty much at the top, and it's commented). All the classes and their names are included there.
 
 ## Reference
 
