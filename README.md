@@ -8,7 +8,7 @@ This package for [Sublime Text 2][1] makes developing Rainmeter skins even more 
 
 Syntax highlighting is turned on by default for files with the .ini and .inc extensions. It works best with the included color schemes, although other color schemes might work, too. 
 
-There are four built-in color schemes you can choose from by copying `Rainmeter.sublime-settings` from the Rainmeter package directory to your User directory and changing the path to the .tmTheme file.
+There are several built-in color schemes you can choose from by copying `Rainmeter.sublime-settings` from the Rainmeter package directory to your User directory and changing the path to the .tmTheme file. Using other color schemes that are not optimized for Rainmeter is possible, but will probably yield sub-optimal results.
 
 ![Color Schemes][im1] 
 
@@ -68,7 +68,9 @@ I'm looking into adding the package to [Package Control][3], so installing and k
 <a name='postinstall'></a>
 ## After Installing
 
-If your Rainmeter is not installed in `C:\Program Files\Rainmeter`, copy the file `Rainmeter.sublime-build` into your User directory (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages\User`) and edit it, replacing the path to Rainmeter with your own install location.
+### Setting up the build system
+
+If your Rainmeter is not installed in `C:\Program Files\Rainmeter`, copy the file `Rainmeter.sublime-build` into your User directory (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages\User`), rename it to `Rainmeter (User).sublime-build` and edit it, replacing the path to Rainmeter with your own install location. Make sure that "Automatic" or "Rainmeter (User)" is selected as the build system to use.
 
 ## Issues
 
@@ -76,7 +78,7 @@ The syntax definition tries to highlight all common language constructs properly
 
 ## Hints for Color Scheme Designers
 
-You can see all the different classes the syntax defines by looking into `Rainmeter.JSON-tmLanguage`. Perhaps even easier is copying the rainmeter-specific part from one of the included color schemes (it's pretty much at the top, and it's commented). All the classes and their names are included there.
+You can see all the different classes the syntax defines by looking into `Rainmeter.JSON-tmLanguage`. Perhaps even easier is copying the rainmeter-specific part from one of the included color schemes (it's pretty much at the top, and it's commented). All the classes with a short description what they mean are included there.
 
 ## Reference
 

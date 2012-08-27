@@ -75,7 +75,7 @@
 					<key>comment</key>
 					<string>All other options in a section</string>
 					<key>match</key>
-					<string>^\s*(?!@include([2-9]{1,1}|[0-9]{2,})?)([^\s=]*)\s*(=)</string>
+					<string>^\s*(?!@include([2-9]{1,1}|[0-9]{2,})?)([^\s=]+)\s*(=)</string>
 					<key>name</key>
 					<string>meta.option.rainmeter</string>
 				</dict>
@@ -113,7 +113,7 @@
 			<key>comment</key>
 			<string>Environment variables</string>
 			<key>match</key>
-			<string>%[0-9a-zA-Z_]+?%</string>
+			<string>%[A-Za-z][0-9a-zA-Z_]*?%</string>
 			<key>name</key>
 			<string>variable.other.env.rainmeter</string>
 		</dict>
@@ -129,7 +129,7 @@
 			<key>comment</key>
 			<string>Deprecated bangs</string>
 			<key>match</key>
-			<string>(?i)!((Rainmeter((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(PLAY)|(PLAYLOOP)|(PLAYSTOP)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Update)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?)))|Execute|PluginBang)\b</string>
+			<string>(?i)!((Rainmeter((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Update)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?)))|Execute|PluginBang)\b</string>
 			<key>name</key>
 			<string>invalid.deprecated.bang.rainmeter</string>
 		</dict>
@@ -137,7 +137,7 @@
 			<key>comment</key>
 			<string>Bangs</string>
 			<key>match</key>
-			<string>(?i)!((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(PLAY)|(PLAYLOOP)|(PLAYSTOP)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?|(Update)))\b</string>
+			<string>(?i)(PLAY(LOOP|STOP)?)|(!((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?|(Update))))\b</string>
 			<key>name</key>
 			<string>support.function.bang.rainmeter</string>
 		</dict>
@@ -485,7 +485,7 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>2</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.operator.option.equal.rainmeter</string>
@@ -509,7 +509,7 @@
 					<key>name</key>
 					<string>storage.type.option.predefined.rainmeter</string>
 				</dict>
-				<key>2</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.operator.option.equal.rainmeter</string>
@@ -936,7 +936,7 @@
 			<key>comment</key>
 			<string>All other options in a section</string>
 			<key>match</key>
-			<string>^\s*([^\s=]*)\s*(=)</string>
+			<string>^\s*([^\s=]+)\s*(=)</string>
 			<key>name</key>
 			<string>meta.option.rainmeter</string>
 		</dict>
