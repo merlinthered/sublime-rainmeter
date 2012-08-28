@@ -51,6 +51,22 @@ The package includes a custom "build system" for Rainmeter, which lets you refre
 
 ## Installation
 
+### with Package Control (recommended)
+
+The package is pending to be added to the [Package Control][3] default channel, so installing will be very easy and updating will be automatic. For now, you have to add the repository to your Package Control manually.
+
+To do this, open the command palette in Sublime Text 2 (`ctrl+shift+p`). Then, enter the URL of the project repository:
+
+	https://github.com/merlinthered/sublime-rainmeter
+
+Next, open your Package Control user settings (Preferences > Package Settings > Package Control > Settings - User) and add the following line at the very top, after the opening curly brace:
+
+	"package_name_map": {"sublime-rainmeter": "Rainmeter"},
+
+You should now be able to install the package via the "Package Control: Install Package" command.
+
+Once the package is added to the default channel, these steps won't be necessary any more and you will be able to install the package out of the box.
+
 ### using git
 
 Browse to your Sublime Text 2 Package folder (*C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages* on Windows). Then clone the package there using git: 
@@ -65,23 +81,7 @@ in the Rainmeter package directory.
 
 ### by downloading sublime-package
 
-Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (*C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages*)
-
-### with Package Control
-
-The package is pending to be added to the [Package Control][3] default channel, so installing will be very easy and updating will be automatic. If you don't want to wait, just add the repository to your Package Control manually.
-
-To do this, open the command palette in Sublime Text 2 (`ctrl+shift+p`). Then, enter the URL of this repository:
-
-	https://github.com/merlinthered/sublime-rainmeter
-
-Next, open your Package Control user settings (Preferences > Package Settings > Package Control > Settings - User) and add the following line at the very top, after the opening curly brace:
-
-	"package_name_map": {"sublime-rainmeter": "Rainmeter"},
-
-You should now be able to install the package via the "Package Control: Install Package" command.
-
-Once the package is added to the default channel, these steps won't be necessary any more and you will be able to install the package out of the box.
+Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (*C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages*). This download will not be updated as often
 
 <a name='postinstall'></a>
 ## After Installing
