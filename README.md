@@ -141,6 +141,7 @@ You can see all the different classes the syntax defines by looking into `Rainme
 * [Color Picker plugin by weslly][4], which I tweaked to work with Rainmeter
 * [RainLexer by poiru][5], which is another awesome tool for developing Rainmeter skins, for the inspiration and one of the color schemes.
 * [Monokai Color Scheme by Wimer Hazenberg][6], for providing such an amazing composition of colors.
+* [Kaelri](https://github.com/Kaelri) for contributing the "Nexus" color scheme.
 * [The Rainmeter Community][7], for being awesome and testing this package.
 
 [1]: http://www.sublimetext.com/ "Sublime Text 2"
