@@ -14,5 +14,41 @@
 				]
 			}
 		]
+	},
+	{
+		"caption": "Preferences",
+		"id": "preferences",
+		"children": 
+		[
+			{
+				"caption": "Package Settings",
+				"id": "package-settings",
+				"children":
+				[
+					{				
+						"caption": "Rainmeter",
+						"id": "rainmeter",
+						"children":
+						[
+							{
+                                "command": "open_file", "args":
+                                {
+                                    "file": "${packages}/Rainmeter/Rainmeter.sublime-settings"
+                                },
+                                "caption": "Settings – Default"
+                            },
+                            {
+                                "command": "open_file", "args":
+                                {
+                                    "file": "${packages}/User/Rainmeter.sublime-settings"
+                                },
+                                "caption": "Settings – User"
+                            }
+						]
+					}
+				]
+			}
+			
+		]
 	}
 ]

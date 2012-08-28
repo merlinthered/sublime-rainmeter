@@ -35,7 +35,7 @@ if sublime.platform() == 'windows':
     ReleaseDC.argtypes = [c_void_p, c_void_p] #hwnd, hdc
     ReleaseDC.restype = c_int32
 
-class ColorPickCommand(sublime_plugin.TextCommand):
+class RainmeterColorPickCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         paste = None
         sel = self.view.sel()

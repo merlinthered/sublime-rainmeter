@@ -6,9 +6,7 @@ This package for [Sublime Text 2][1] makes developing Rainmeter skins even more 
 
 ### Syntax Highlighting
 
-Syntax highlighting is turned on by default for files with the .ini and .inc extensions. It works best with the included color schemes, although other color schemes might work, too. 
-
-There are several built-in color schemes you can choose from by copying `Rainmeter.sublime-settings` from the Rainmeter package directory to your User directory and changing the path to the .tmTheme file. Using other color schemes that are not optimized for Rainmeter is possible, but will probably yield sub-optimal results.
+Syntax highlighting is turned on by default for files with the .ini and .inc extensions. It works best with the included color schemes, although other color schemes might work, too. See [Selecting Your Color Scheme](#colorschemesettings) for instructions on how to change the color scheme.
 
 ![Color Schemes][im1] 
 
@@ -59,22 +57,61 @@ Browse to your Sublime Text 2 Package folder (`C:\Users\[Your Username]\AppData\
 
 	git clone https://github.com/merlinthered/sublime-rainmeter.git Rainmeter
 
+Don't forget to update regularly by running
+
+	git pull
+
+in the Rainmeter package directory.
+
 ### by downloading sublime-package
 
 Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages`)
 
-I'm looking into adding the package to [Package Control][3], so installing and keeping up-to-date will be easier
+### with Package Control
+
+The package is pending to be added to the [Package Control][3] default channel, so installing will be very easy and updating will be automatic. If you don't want to wait, just add the repository to your Package Control manually.
+
+To do this, open the command palette in Sublime Text 2 (`ctrl+shift+p`). Then, enter the URL of this repository:
+
+	https://github.com/merlinthered/sublime-rainmeter
+
+Next, open your Package Control user settings (Preferences > Package Settings > Package Control > Settings - User) and add the following line at the very top, after the opening curly brace:
+
+	"package_name_map": {"sublime-rainmeter": "Rainmeter"},
+
+You should now be able to install the package via the "Package Control: Install Package" command.
+
+Once the package is added to the default channel, these steps won't be necessary any more and you will be able to install the package out of the box.
 
 <a name='postinstall'></a>
 ## After Installing
 
-### Setting up the build system
+### Setting up the Build System
 
 If your Rainmeter is not installed in `C:\Program Files\Rainmeter`, copy the file `Rainmeter.sublime-build` into your User directory (`C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages\User`), rename it to `Rainmeter (User).sublime-build` and edit it, replacing the path to Rainmeter with your own install location. Make sure that "Automatic" or "Rainmeter (User)" is selected as the build system to use.
 
+<a name="colorschemesettings"></a>
+### Selecting Your Color Scheme
+
+There are several built-in color schemes you can choose from. If you don't want to use the default color scheme "Monokai (Rainmeter)", you can select a custom one by editing your user settings: Preferences > Package Settings > Rainmeter > Settings - User. Add the following to specify your color scheme:
+
+	"color_scheme": "Packages/Rainmeter/YourFavouriteScheme.tmTheme"
+
+If the file was empty, you'll also have to add a "{" at the start of the file, and a "}" at the end of the file.
+
+The following color schemes are currently included in the package:
+
+* Lachgummi Joghurt.tmTheme
+* Monokai (Rainmeter).tmTheme
+* Nexus (Rainmeter).tmTheme
+* RainLexer.tmTheme
+* Rainmeter (Light).tmTheme
+
+Using other color schemes that are not optimized for Rainmeter is possible, but will probably yield sub-optimal results.
+
 ## Issues
 
-The syntax definition tries to highlight all common language constructs properly. It might fail in some cases, where something is highlighted even though it's not supposed to be. One prominent example is that every number that has exactly 6 or 8 digits being highlighted like a hexadecimal color definition. I chose this explicitly because I think identifying the different parts in a color definition is more important than some incorrectly colored numbers. In most other cases, wrong highlighting is due to the inherent ambiguity in Rainmeter syntax. If you encounter one of those cases, don't hesitate to contact me, especially if you think you know how to fix it.
+The syntax definition tries to capture all common language constructs properly. It might fail in some cases, where something is highlighted even though it's not supposed to be. One prominent example is that every number that has exactly 6 or 8 digits being highlighted like a hexadecimal color definition. I chose this explicitly because I think identifying the different parts in a color definition is more important than some incorrectly colored numbers. In most other cases, wrong highlighting is due to the inherent ambiguity in Rainmeter syntax. If you encounter one of those cases, don't hesitate to contact me, especially if you think you know how to fix it.
 
 ## Hints for Color Scheme Designers
 
@@ -85,7 +122,7 @@ You can see all the different classes the syntax defines by looking into `Rainme
 ### Used Commands
 * indent_rainmeter
 * new_skin
-* color_pick
+* rainmeter_color_pick
 
 ### Used Command Palette Commands
 * Rainmeter: Indent for Code Folding
