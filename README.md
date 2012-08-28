@@ -136,6 +136,8 @@ You can see all the different classes the syntax defines by looking into *Rainme
 ### Used Menu Entries
 * Tools > Rainmeter > Indent for Code Folding
 * Tools > Rainmeter > New Skin...
+* Preferences > Package Settings > Rainmeter > Settings - Default
+* Preferences > Package Settings > Rainmeter > Settings - User
 
 ## Acknowledgements
 * [Color Picker plugin by weslly][4], which I tweaked to work with Rainmeter
