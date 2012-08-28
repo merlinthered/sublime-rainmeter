@@ -20,7 +20,7 @@ If a certain file type doesn't open with Rainmeter highlighting even though you 
 
 Code completion is activated by default. While typing, it will suggest completions from a list of options, values, built-in variables and more. When auto-completing a bang, the required and optional (in braces) parameters are also added, and you can cycle through them by pressing `tab` or `shift+tab`.
 
-Additionally, code snippets for common usages of each meter and measure type, and all native plugins are included. The names of those snippets start with a "t" for template, so if you want to insert a basic template for a string meter, type `tstring` and hit enter, if you want to insert a metadata block, type `tmetadata`. There is also a snippet with a basic structure of a skin file called `tskin`.
+Additionally, code snippets for common usages of each meter and measure type, and all native plugins are included. The names of those snippets start with a "t" for "template", so if you want to insert a basic template for a string meter, type `tstring` and hit enter, if you want to insert a metadata block, type `tmetadata`. There is also a snippet with a basic structure of a skin file called `tskin`.
 
 ![Snippets][im3]
 
