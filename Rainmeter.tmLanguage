@@ -129,7 +129,7 @@
 			<key>comment</key>
 			<string>Deprecated bangs</string>
 			<key>match</key>
-			<string>(?i)!((Rainmeter((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Update)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?)))|Execute|PluginBang)\b</string>
+			<string>(?i)!((Rainmeter((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Update)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?)))|Execute|(Rainmeter)?PluginBang)\b</string>
 			<key>name</key>
 			<string>invalid.deprecated.bang.rainmeter</string>
 		</dict>

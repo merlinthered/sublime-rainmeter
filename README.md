@@ -69,7 +69,7 @@ Once the package is added to the default channel, these steps won't be necessary
 
 ### using git
 
-Browse to your Sublime Text 2 Package folder (*C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages* on Windows). Then clone the package there using git: 
+Browse to your Sublime Text 2 Package folder (*C:\\Users\\\[Your Username\]\\AppData\\Roaming\\Sublime Text 2\\Packages* on Windows). Then clone the package there using git: 
 
 	git clone https://github.com/merlinthered/sublime-rainmeter.git Rainmeter
 
@@ -81,14 +81,14 @@ in the Rainmeter package directory.
 
 ### by downloading sublime-package
 
-Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (*C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages*). This download will not be updated as often
+Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (*C:\\Users\\\[Your Username]\AppData\\Roaming\\Sublime Text 2\\Installed Packages*). This download will not be updated as often
 
 <a name='postinstall'></a>
 ## After Installing
 
 ### Setting up the Build System
 
-If your Rainmeter is not installed in *C:\Program Files\Rainmeter*, copy the file *Rainmeter.sublime-build* into your User directory (*C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages\User*), rename it to *Rainmeter (User).sublime-build* and edit it, replacing the path to Rainmeter with your own install location. Make sure that "Automatic" or "Rainmeter (User)" is selected as the build system to use.
+If your Rainmeter is not installed in *C:\\Program Files\\Rainmeter*, copy the file *Rainmeter.sublime-build* into your User directory (*C:\\Users\\\[Your Username\]\\AppData\\Roaming\\Sublime Text 2\\Packages\\User*), rename it to *Rainmeter (User).sublime-build* and edit it, replacing the path to Rainmeter with your own install location. Make sure that "Automatic" or "Rainmeter (User)" is selected as the build system to use.
 
 <a name="colorschemesettings"></a>
 ### Selecting Your Color Scheme
