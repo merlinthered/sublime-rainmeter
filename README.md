@@ -1,5 +1,7 @@
 # Features
 
+This package for [Sublime Text 2][1] makes creating and editing [Rainmeter][7] skins even more fun!
+
 ## Syntax Highlighting
 
 Syntax highlighting is turned on by default for files with the .ini and .inc extensions. It works best with the included color schemes, although other color schemes might work, too. See [Selecting Your Color Scheme](#colorschemesettings) for instructions on how to change the color scheme.
