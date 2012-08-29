@@ -77,7 +77,7 @@ in the Rainmeter package directory.
 
 ## By Downloading sublime-package
 
-Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (*C:\\Users\\\[Your Username]\AppData\\Roaming\\Sublime Text 2\\Installed Packages*). This download will not be updated as often
+Download the .sublime-package file from the [Downloads page][2] and place it in your "Installed Packages" directory (*C:\\Users\\\[Your Username]\AppData\\Roaming\\Sublime Text 2\\Installed Packages*). This download will not be updated as often as the git repo and (and therefore also the Package Control install).
 
 <a name='postinstall'></a>
 # After Installing
