@@ -39,43 +39,73 @@
       </nav>
       <section>
 <h1>Features</h1>
-<p>This package for <a href="http://www.sublimetext.com/" title="Sublime Text 2">Sublime Text 2</a> makes creating and editing <a href="http://www.rainmeter.net/" title="Rainmeter">Rainmeter</a> skins even more fun!</p>
+<p>This package for <a href="http://www.sublimetext.com/" title="Sublime Text 2">Sublime Text 2</a> makes creating and editing <a href="http://www.rainmeter.net/" title="Rainmeter">Rainmeter</a> skins 
+even more fun!</p>
 <h2>Syntax Highlighting</h2>
-<p>Syntax highlighting is turned on by default for files with the .ini and .inc extensions. It works best with the included color schemes, although other color schemes might work, too. See <a href="#colorschemesettings">Selecting Your Color Scheme</a> for instructions on how to change the color scheme.</p>
+<p>Syntax highlighting is turned on by default for files with the .ini and .inc extensions. 
+It works best with the included color schemes, although other color schemes might work, too. 
+See <a href="#colorschemesettings">Selecting Your Color Scheme</a> for instructions on how to change the 
+color scheme.</p>
 <p><img alt="Color Schemes" src="http://i.imgur.com/esG5C.png" title="Color Schemes" /> </p>
-<p>If a certain file type doesn't open with Rainmeter highlighting even though you want it to, select View &gt; Syntax &gt; Open all with current extension as... &gt; Rainmeter.</p>
+<p>If a certain file type doesn't open with Rainmeter highlighting even though you want it to,
+select View &gt; Syntax &gt; Open all with current extension as... &gt; Rainmeter.</p>
 <h2>Code Completion</h2>
 <p><img alt="Code Completion" src="http://i.imgur.com/ijcEU.png" title="Code Completion" /></p>
-<p>Code completion is activated by default. While typing, it will suggest completions from a list of options, values, built-in variables and more. When auto-completing a bang, the required and optional (in braces) parameters are also added, and you can cycle through them by pressing <code>tab</code> or <code>shift+tab</code>.</p>
-<p>Additionally, code snippets for common usages of each meter and measure type, and all native plugins are included. The names of those snippets start with a "t" for "template", so if you want to insert a basic template for a string meter, type <code>tstring</code> and hit enter, if you want to insert a metadata block, type <code>tmetadata</code>. There is also a snippet with a basic structure of a skin file called <code>tskin</code>.</p>
+<p>Code completion is activated by default. While typing, it will suggest completions from a list
+of options, values, built-in variables and more. When auto-completing a bang, the required 
+and optional (in braces) parameters are also added, and you can cycle through them by pressing
+<code>tab</code> or <code>shift+tab</code>.</p>
+<p>Additionally, code snippets for common usages of each meter and measure type, and all native
+plugins are included. The names of those snippets start with a "t" for "template", so if you 
+want to insert a basic template for a string meter, type <code>tstring</code> and hit enter, if you want 
+to insert a metadata block, type <code>tmetadata</code>. There is also a snippet with a basic structure 
+of a skin file called <code>tskin</code>.</p>
 <p><img alt="Snippets" src="http://i.imgur.com/O7FjT.png" title="Snippets" /></p>
-<p>You can see all available snippets by looking in the <code>Snippets</code> folder in the Rainmeter package directory. If you feel that one of those snippets needs to be changed in order to be more useful, don't hesitate to contact me.</p>
+<p>You can see all available snippets by looking in the <code>Snippets</code> folder in the Rainmeter 
+package directory. If you feel that one of those snippets needs to be changed in order to be 
+more useful, don't hesitate to contact me.</p>
 <h2>Tools</h2>
 <p><a name='AutomaticIndentation'></a></p>
 <h3>Code Folding</h3>
 <p><img alt="Code Folding" src="http://i.imgur.com/OEXo8.png" title="Code Folding" /></p>
-<p>Sublime Text 2 supports folding indented code sections. The command <code>indent_rainmeter</code> that is included in this package automatically indents a rainmeter source file so code folding is possible in a sensible way. Hit <code>ctrl+alt+i</code> to activate it. All options in a section are indented and can be folded away. Additionally, inserting a comment line starting with a double semicolon: <code>;;</code> will indent everything after it so it can be folded until the next <code>;;</code> that you indented by the same amount. This is useful if you want to fold a specific section of code, like all measures or meters. If you want to add a nice looking header for your foldable sections, try typing <code>divider</code> and hitting enter.</p>
+<p>Sublime Text 2 supports folding indented code sections. The command <code>indent_rainmeter</code> that is 
+included in this package automatically indents a rainmeter source file so code folding is 
+possible in a sensible way. Hit <code>ctrl+alt+i</code> to activate it. All options in a section are 
+indented and can be folded away. Additionally, inserting a comment line starting with a double 
+semicolon: <code>;;</code> will indent everything after it so it can be folded until the next <code>;;</code> that 
+you indented by the same amount. This is useful if you want to fold a specific section of 
+code, like all measures or meters. If you want to add a nice looking header for your foldable 
+sections, try typing <code>divider</code> and hitting enter.</p>
 <h3>Color Picker</h3>
 <p><img alt="Color Picker" src="http://i.imgur.com/kdZXJ.png" title="Color Picker" /></p>
-<p>Ever wanted to quickly adjust the color of a meter but found yourself unable to imagine what a rgb color will look like in your head? No more! I have adapted the awesome <a href="https://github.com/weslly/ColorPicker" title="Color Picker">Color Picker Plugin</a> created by weslly to work with rainmeter-style hex-color definitions. Place your mouse cursor in a hexadecimal color definition, or select it and hit <code>ctrl+shift+c</code>. This will open a color picker dialog and let you choose a color. If your cursor is currently not in a color definition, the hex code will be inserted at the cursor position. You can't adjust the alpha value, but it will be preserved after you chose the new color.</p>
+<p>Ever wanted to quickly adjust the color of a meter but found yourself unable to imagine what a 
+rgb color will look like in your head? No more! I have adapted the awesome <a href="https://github.com/weslly/ColorPicker" title="Color Picker">Color Picker Plugin</a> 
+created by weslly to work with rainmeter-style hex-color definitions. Place your mouse cursor 
+in a hexadecimal color definition, or select it and hit <code>ctrl+shift+c</code>. This will open a color 
+picker dialog and let you choose a color. If your cursor is currently not in a color 
+definition, the hex code will be inserted at the cursor position. You can't adjust the alpha 
+value, but it will be preserved after you chose the new color.</p>
 <h3>New Skin</h3>
 <p><img alt="Tools Menu" src="http://i.imgur.com/DziPa.png" title="Tools Menu" /></p>
-<p>The Rainmeter section in the Tools menu contains a handy command for creating a new skin. It will open a new buffer, insert a basic skin skeleton and change the syntax highlighting mode to Rainmeter. The same skeleton is also available as a snippet called <code>tskin</code>.</p>
+<p>The Rainmeter section in the Tools menu contains a handy command for creating a new skin. It 
+will open a new buffer, insert a basic skin skeleton and change the syntax highlighting mode 
+to Rainmeter. The same skeleton is also available as a snippet called <code>tskin</code>.</p>
 <h3>Refresh Skin/Rainmeter</h3>
-<p>The package includes a custom "build system" for Rainmeter, which lets you refresh the current skin with a single button press. Press <code>f7</code> or <code>ctrl+b</code> to refresh the current skin, or load it, if it's not currently active. Pressing <code>ctrl+shift+b</code> will refresh Rainmeter and all skins instead. Those commands are also available from the tools menu via <code>Build</code> and <code>Run</code>. If this is not working for you, see <a href="#postinstall">After Installing</a>.</p>
+<p>The package includes a custom "build system" for Rainmeter, which lets you refresh the current 
+skin with a single button press. Press <code>f7</code> or <code>ctrl+b</code> to refresh the current skin, or load 
+it, if it's not currently active. Pressing <code>ctrl+shift+b</code> will refresh Rainmeter and all skins 
+instead. Those commands are also available from the tools menu via <code>Build</code> and <code>Run</code>. If this 
+is not working for you, see <a href="#postinstall">After Installing</a>.</p>
 <h1>Installation</h1>
 <h2>With Package Control (recommended)</h2>
-<p>The package is pending to be added to the <a href="http://wbond.net/sublime_packages/package_control" title="Package Control">Package Control</a> default channel, so installing will be very easy and updating will be automatic. For now, you have to add the repository to your Package Control manually.</p>
-<p>To do this, open the command palette in Sublime Text 2 (<code>ctrl+shift+p</code>). Then, enter the URL of the project repository:</p>
-<pre><code>https://github.com/merlinthered/sublime-rainmeter
-</code></pre>
-<p>Next, open your Package Control user settings (Preferences &gt; Package Settings &gt; Package Control &gt; Settings - User) and add the following line at the very top, after the opening curly brace:</p>
-<pre><code>"package_name_map": {"sublime-rainmeter": "Rainmeter"},
-</code></pre>
-<p>You should now be able to install the package via the "Package Control: Install Package" command.</p>
-<p>Once the package is added to the default channel, these steps won't be necessary any more and you will be able to install the package out of the box.</p>
+<p>The easiest way to install is via <a href="http://wbond.net/sublime_packages/package_control" title="Package Control">Package Control</a>. If you don't have it installed yet,
+I highly recommend it. Package Control will manage your packages and update them automatically.</p>
+<p>If you have Package Control installed, open the command palette (<code>ctrl+shift+p</code>) and run the
+"Package Control: Install Package" command. Type in "Rainmeter" and hit enter. The package
+will now be installed and updated automatically.</p>
 <h2>Using Git</h2>
-<p>Browse to your Sublime Text 2 Package folder (<em>C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages</em> on Windows). Then clone the package there using git: </p>
+<p>Browse to your Sublime Text 2 Package folder (<em>C:\Users\[Your Username]\AppData\Roaming\
+Sublime Text 2\Packages</em> on Windows). Then clone the package there using git: </p>
 <pre><code>git clone https://github.com/merlinthered/sublime-rainmeter.git Rainmeter
 </code></pre>
 <p>Don't forget to update regularly by running</p>
@@ -83,17 +113,28 @@
 </code></pre>
 <p>in the Rainmeter package directory.</p>
 <h2>By Downloading sublime-package</h2>
-<p>Download the .sublime-package file from the <a href="https://github.com/merlinthered/sublime-rainmeter/downloads" title="Downloads page">Downloads page</a> and place it in your "Installed Packages" directory (<em>C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Installed Packages</em>). This download will not be updated as often as the git repo and (and therefore also the Package Control install).</p>
+<p>Download the .sublime-package file from the <a href="https://github.com/merlinthered/sublime-rainmeter/downloads" title="Downloads page">Downloads page</a> and place it in your 
+"Installed Packages" directory (<em>C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\
+Installed Packages</em>). This download will not be updated as often as the git repo and (and 
+therefore also the Package Control install).</p>
 <p><a name='postinstall'></a></p>
 <h1>After Installing</h1>
 <h2>Setting up the Build System</h2>
-<p>If your Rainmeter is not installed in <em>C:\Program Files\Rainmeter</em>, copy the file <em>Rainmeter.sublime-build</em> into your User directory (<em>C:\Users\[Your Username]\AppData\Roaming\Sublime Text 2\Packages\User</em>), rename it to <em>Rainmeter (User).sublime-build</em> and edit it, replacing the path to Rainmeter with your own install location. Make sure that "Automatic" or "Rainmeter (User)" is selected as the build system to use.</p>
+<p>If your Rainmeter is not installed in <em>C:\Program Files\Rainmeter</em>, copy the file <em>Rainmeter.
+sublime-build</em> into your User directory (<em>C:\Users\[Your Username]\AppData\Roaming\
+Sublime Text 2\Packages\User</em>), rename it to <em>Rainmeter (User).sublime-build</em> and edit it, 
+replacing the path to Rainmeter with your own install location. Make sure that "Automatic" or 
+"Rainmeter (User)" is selected as the build system to use.</p>
 <p><a name="colorschemesettings"></a></p>
 <h2>Selecting Your Color Scheme</h2>
-<p>There are several built-in color schemes you can choose from. If you don't want to use the default color scheme "Monokai (Rainmeter)", you can select a custom one by editing your user settings: Preferences &gt; Package Settings &gt; Rainmeter &gt; Settings - User. Add the following to specify your color scheme:</p>
+<p>There are several built-in color schemes you can choose from. If you don't want to use the 
+default color scheme "Monokai (Rainmeter)", you can select a custom one by editing your user 
+settings: Preferences &gt; Package Settings &gt; Rainmeter &gt; Settings - User. Add the following to 
+specify your color scheme:</p>
 <pre><code>"color_scheme": "Packages/Rainmeter/YourFavouriteScheme.tmTheme"
 </code></pre>
-<p>If the file was empty, you'll also have to add a "{" at the start of the file, and a "}" at the end of the file.</p>
+<p>If the file was empty, you'll also have to add a "{" at the start of the file, and a "}" at 
+the end of the file.</p>
 <p>The following color schemes are currently included in the package:</p>
 <ul>
 <li>Lachgummi Joghurt.tmTheme</li>
@@ -102,12 +143,23 @@
 <li>RainLexer.tmTheme</li>
 <li>Rainmeter (Light).tmTheme</li>
 </ul>
-<p>Using other color schemes that are not optimized for Rainmeter is possible, but will probably yield sub-optimal results.</p>
+<p>Using other color schemes that are not optimized for Rainmeter is possible, but will probably 
+yield sub-optimal results.</p>
 <h1>Additional Information</h1>
 <h2>Issues</h2>
-<p>The syntax definition tries to capture all common language constructs properly. It might fail in some cases, where something is highlighted even though it's not supposed to be. One prominent example is that every number that has exactly 6 or 8 digits being highlighted like a hexadecimal color definition. I chose this explicitly because I think identifying the different parts in a color definition is more important than some incorrectly colored numbers. In most other cases, wrong highlighting is due to the inherent ambiguity in Rainmeter syntax. If you encounter one of those cases, don't hesitate to contact me, especially if you think you know how to fix it.</p>
+<p>The syntax definition tries to capture all common language constructs properly. It might fail 
+in some cases, where something is highlighted even though it's not supposed to be. 
+One prominent example is that every number that has exactly 6 or 8 digits being highlighted 
+like a hexadecimal color definition. I chose this explicitly because I think identifying the 
+different parts in a color definition is more important than some incorrectly colored numbers. 
+In most other cases, wrong highlighting is due to the inherent ambiguity in Rainmeter syntax. 
+If you encounter one of those cases, don't hesitate to contact me, especially if you think you 
+know how to fix it.</p>
 <h2>Hints for Color Scheme Designers</h2>
-<p>You can see all the different classes the syntax defines by looking into <em>Rainmeter.JSON-tmLanguage</em>. Perhaps even easier is copying the rainmeter-specific part from one of the included color schemes (it's pretty much at the top, and it's commented). All the classes with a short description what they mean are included there.</p>
+<p>You can see all the different classes the syntax defines by looking into 
+<em>Rainmeter.JSON-tmLanguage</em>. Perhaps even easier is copying the rainmeter-specific part from 
+one of the included color schemes (it's pretty much at the top, and it's commented). 
+All the classes with a short description what they mean are included there.</p>
 <h2>Reference</h2>
 <h3>Used Commands</h3>
 <ul>
@@ -136,8 +188,10 @@
 <h1>Acknowledgements</h1>
 <ul>
 <li><a href="https://github.com/weslly/ColorPicker" title="Color Picker">Color Picker plugin by weslly</a>, which I tweaked to work with Rainmeter</li>
-<li><a href="https://github.com/poiru/rainlexer" title="RainLexer">RainLexer by poiru</a>, which is another awesome tool for developing Rainmeter skins, for the inspiration and one of the color schemes.</li>
-<li><a href="http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/" title="Monokai">Monokai Color Scheme by Wimer Hazenberg</a>, for providing such an amazing composition of colors.</li>
+<li><a href="https://github.com/poiru/rainlexer" title="RainLexer">RainLexer by poiru</a>, which is another awesome tool for developing Rainmeter skins, 
+  for the inspiration and one of the color schemes.</li>
+<li><a href="http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/" title="Monokai">Monokai Color Scheme by Wimer Hazenberg</a>, for providing such an amazing composition 
+  of colors.</li>
 <li><a href="https://github.com/Kaelri">Kaelri</a> for contributing the "Nexus" color scheme.</li>
 <li><a href="http://www.rainmeter.net/" title="Rainmeter">The Rainmeter Community</a>, for being awesome and testing this package.</li>
 </ul>
