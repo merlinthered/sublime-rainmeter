@@ -84,26 +84,12 @@ is not working for you, see [After Installing](#postinstall).
 
 ## With Package Control (recommended)
 
-The package is pending to be added to the [Package Control][3] default channel, so installing 
-will be very easy and updating will be automatic. For now, you have to add the repository to 
-your Package Control manually.
+The easiest way to install is via [Package Control][3]. If you don't have it installed yet,
+I highly recommend it. Package Control will manage your packages and update them automatically.
 
-To do this, open the command palette in Sublime Text 2 (`ctrl+shift+p`). Then, enter the URL 
-of the project repository:
-
-	https://github.com/merlinthered/sublime-rainmeter
-
-Next, open your Package Control user settings (Preferences > Package Settings > 
-Package Control > Settings - User) and add the following line at the very top, after the 
-opening curly brace:
-
-	"package_name_map": {"sublime-rainmeter": "Rainmeter"},
-
-You should now be able to install the package via the "Package Control: Install Package" 
-command.
-
-Once the package is added to the default channel, these steps won't be necessary any more and 
-you will be able to install the package out of the box.
+If you have Package Control installed, open the command palette (`ctrl+shift+p`) and run the
+"Package Control: Install Package" command. Type in "Rainmeter" and hit enter. The package
+will now be installed and updated automatically.
 
 ## Using Git
 
