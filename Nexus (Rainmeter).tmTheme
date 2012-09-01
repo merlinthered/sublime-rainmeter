@@ -114,34 +114,6 @@
 
 		<dict>
 			<key>name</key>
-			<string>Predefined Keys</string>
-			<key>scope</key>
-			<string>storage.type.option.predefined.include.rainmeter</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold italic</string>
-				<key>foreground</key>
-				<string>#CC7833</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Equal Sign in "Key=Value"</string>
-			<key>scope</key>
-			<string>keyword.operator.option.equal.rainmeter</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FFC66D</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
 			<string>Custom Keys</string>
 			<key>scope</key>
 			<string>storage.type.option.rainmeter</string>
@@ -318,6 +290,20 @@
 			</dict>
 		</dict>
 
+		<dict>
+			<key>name</key>
+			<string>Include Statement</string>
+			<key>scope</key>
+			<string>storage.type.option.predefined.include.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#A5C261</string>
+			</dict>
+		</dict>
+
 		<!-- RGBA OPTIONS -->
 
 		<dict>
@@ -376,6 +362,39 @@
 			</dict>
 		</dict>
 
+		<!-- COMMENTS & PUNCTUATION -->
+		<!-- Color: Gray (#75715E) -->
+
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#75715E</string>
+				<!-- <string>#BC9458</string> -->
+				<!-- Original Nexus comment color (orange-ish). -->
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Equal Sign in "Key=Value"</string>
+			<key>scope</key>
+			<string>keyword.operator.option.equal.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#75715E</string>
+			</dict>
+		</dict>
+
 		<!-- INVALID & DEPRECATED VALUES -->
 		
 		<dict>
@@ -413,21 +432,6 @@
 
 		<!-- GENERAL STYLES (FROM NEXUS) -->
 
-		<dict>
-			<key>name</key>
-			<string>Comment</string>
-			<key>scope</key>
-			<string>comment</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
-				<key>foreground</key>
-				<string>#75715e</string>
-				<!-- <string>#BC9458</string> -->
-				<!-- Original Nexus comment color (orange-ish). -->
-			</dict>
-		</dict>
 	    <dict>
 	      <key>name</key>
 	      <string>Source</string>
