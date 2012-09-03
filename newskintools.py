@@ -1,4 +1,4 @@
-import sublime, sublime_plugin, os, rainmeter, time
+import sublime, sublime_plugin, os, re, rainmeter, time
 
 #Opens a new view and inserts a skin skeleton
 class RainmeterNewSkinFileCommand(sublime_plugin.WindowCommand):
@@ -16,7 +16,7 @@ class RainmeterNewSkinFileCommand(sublime_plugin.WindowCommand):
 #Then opens the skin file, inserts a basic skin skeleton and refreshes Rainmeter
 class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
 	def run(self):
-		self.window.show_input_panel("Enter Skin Name:", "MySkin", (lambda name: self.createskin(name)), None, None)
+		self.window.show_input_panel("Enter Skin Name:", "", (lambda name: self.createskin(name)), None, None)
 
 	def createskin(self, name):		
 		skinspath = rainmeter.skins_path
@@ -24,19 +24,33 @@ class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
 			sublime.error_message("Error while trying to create new skin: Skins path could not be found. Please check the value of your \"skins_path\" setting.")
 			return
 
-		newskinpath = skinspath + name + "\\"
+		name = os.path.normpath(name) + "\\"
+
+		#Path where the new ini file will be created
+		newskinpath = os.path.join(skinspath, name)
+
+		#Path where the @Resources folder should be created
+		basepath = os.path.join(skinspath, re.match("(.*?)\\\\", name).group(1))
 
 		try:
-			os.makedirs(newskinpath + "\\@Resources\\Images")
-			os.makedirs(newskinpath + "\\@Resources\\Fonts")
-			os.makedirs(newskinpath + "\\@Resources\\Scripts")
+			os.makedirs(newskinpath)
 		except os.error:
 			sublime.error_message("Error while trying to create new skin: Directory " + newskinpath + " could not be created. Does it already exist?")
 			return
 
+		try:
+			os.makedirs(basepath + "\\@Resources"),
+			os.makedirs(basepath + "\\@Resources\\Images")
+			os.makedirs(basepath + "\\@Resources\\Fonts")
+			os.makedirs(basepath + "\\@Resources\\Scripts")
+		except os.error:
+			sublime.status_message("Did not create @Resources folder or subfolders because they already exist")
+		
+
 		window = self.window
-		open(newskinpath + name + ".ini", 'a')
-		newview = window.open_file(newskinpath + name + ".ini")
+		filename = os.path.basename(os.path.normpath(name))
+		open(newskinpath + filename + ".ini", 'a')
+		newview = window.open_file(newskinpath + filename + ".ini")
 		#we have to wait until the file is fully loaded (even if it's empty because it was just created)
 		sublime.set_timeout((lambda: self.openskinfile(newview)), 100)
 

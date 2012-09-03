@@ -84,6 +84,15 @@ perform the following operations:
    a basic skin skeleton
 4. Refresh Rainmeter so it recognizes the new skin
 
+**Tip:** If you want to create a new skin that isn't located directly in the
+skins folder, you can enter the path to the new folder you want to create
+(relative to the skins folder). In this case, the path and all subfolders will
+be created and the ini file will get the name of the last folder. For example,
+if you want to create a new skin called "Twitter" in *Enigma/Sidebar/Reader*,
+enter `Enigma/Sidebar/Reader/Twitter` as the skin's name. The *@Resources*
+folder and its subdirectories will only be created if there is no *@Resources*
+folder yet.
+
 If you just want to create a new ini file, try the "New Skin File" command. It
 will just open a new buffer and insert the skin skeleton. The same skeleton is
 also available as a snippet called `tskin`.
