@@ -79,7 +79,7 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
 
 
         elif sublime.platform() == 'osx':
-            location = os.path.join(sublime.packages_path(), 'ColorPicker', 'lib', 'osx_colorpicker')
+            location = os.path.join(sublime.packages_path(), 'Rainmeter', 'lib', 'osx_colorpicker')
             args = [location]
 
             if not os.access(location, os.X_OK):
@@ -90,7 +90,7 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
                 args.append(start_color_osx)
 
         else:
-            location = os.path.join(sublime.packages_path(), 'ColorPicker', 'lib', 'linux_colorpicker.py')
+            location = os.path.join(sublime.packages_path(), 'Rainmeter', 'lib', 'linux_colorpicker.py')
             args = [location]
 
             if not os.access(location, os.X_OK):

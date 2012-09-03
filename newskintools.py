@@ -1,7 +1,7 @@
-import sublime, sublime_plugin, os, getskinspath, time
+import sublime, sublime_plugin, os, rainmeter, time
 
 #Opens a new view and inserts a skin skeleton
-class NewSkinFileCommand(sublime_plugin.WindowCommand):
+class RainmeterNewSkinFileCommand(sublime_plugin.WindowCommand):
 	def run(self):
 		view = self.window.new_file()
 		view.run_command("insert_snippet", {"name": "Packages/Rainmeter/Snippets/skin.sublime-snippet"})
@@ -14,12 +14,12 @@ class NewSkinFileCommand(sublime_plugin.WindowCommand):
 #Prompts the user for the name of a skin and creates 
 #a new skin of that name in the skins folder, if it doesn't already exist.
 #Then opens the skin file, inserts a basic skin skeleton and refreshes Rainmeter
-class NewSkinCommand(sublime_plugin.WindowCommand):
+class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
 	def run(self):
 		self.window.show_input_panel("Enter Skin Name:", "MySkin", (lambda name: self.createskin(name)), None, None)
 
 	def createskin(self, name):		
-		skinspath = getskinspath.get_skins_path()
+		skinspath = rainmeter.skins_path
 		if not skinspath or not os.path.exists(skinspath):
 			sublime.error_message("Error while trying to create new skin: Skins path could not be found. Please check the value of your \"skins_path\" setting.")
 			return

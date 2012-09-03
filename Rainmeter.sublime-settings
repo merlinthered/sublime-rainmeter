@@ -1,7 +1,63 @@
 {
+	//Settings for the Rainmeter Package
+	//==================================
+	//
+	//This file will be overwritten every time the package is updated.
+	//If you want to change one of those settings, go to
+	//Preferences > Package Settings > Rainmeter > Settings - User
+	//and enter the settings there. They will override these ones.
+
+	//The path where Rainmeter is installed.
+	//Change this if your Rainmeter is installed somewhere else.
+	"rainmeter_path": "C:\\Program Files\\Rainmeter",
+
+	//The path where your skins are located.
+	//Only set or change this when something is not working!
+	//You can check if it works by running the "Rainmeter:Open Skins Folder"
+	//command.
+	"rainmeter_skins_path": "",
+
+	//Set this to false if you don't want skins that are currently
+	//not loaded to be activated when you refresh them.
+	"rainmeter_refresh_and_activate": true,
+
+	//The maximum number of lines to open with the "Open Selected Paths..."
+	//command without warning about too many selected lines.
+	"rainmeter_max_open_lines": 40,
+
+	//Set of file endings to open with Sublime when using the "Open Selected
+	//Paths" command. Only override this if you want a specific extension to
+	//open with the system default instead of Sublime. In that case, copy the
+	//whole list into your User settings and remove the unwanted extension.
+	//Separate the extensions with "|" symbols, don't include the dot or any
+	//whitespace. You can use regular expression syntax here, but you have to
+	//escape backslashes. If you override this in your User setting, your
+	//extensions list will replace this one, not add to it!
+	"rainmeter_default_open_sublime_extensions": "asc|asm|bat|bib|c|c\\+\\+|cc|cfg|cls|config|cp|cpp|cs|css|csv|cxx|diff|dtd|dtx|git\\w*?|h|h\\+\\+|hh|hpp|hxx|idl|inc|inf|ini|inl|js|json.*?|log|ltx|lua|mak|markdown|md|pri|pro|py|qml|qs|rtf|s|scp|settings|sh|snippet|sty|sublime.*?|tex|tm(language|preferences|theme)|txt|ui|vcf|wtx|xml",
+
+	//Additional extensions to open with Sublime Text instead of the system
+	//default when using the "Open Selected Paths" command. These will be
+	//added to the default extensions above. If you want to add additional
+	//extensions to be opened with Sublime instead of the default application,
+	//best use this setting. If you set it in your User settings, you don't
+	//need to include the extensions below. They are already in the default
+	//list above and only serve as an example here.
+	"rainmeter_open_sublime_extensions": "ini|inc|txt",
+
+	//Determines if comments will automatically be continued on the next line
+	//when you hit enter in a comment line
+	"rainmeter_continue_comments": true,
+
+	//The color scheme to use for Rainmeter syntax.
 	"color_scheme": "Packages/Rainmeter/Monokai (Rainmeter).tmTheme",
+
+	//Tab size for indentation.
 	"tab_size": 1,
-	"translate_tabes_to_spaces": true,
+
+	//Use spaces or tabs for indentation?
+	"translate_tabs_to_spaces": true,
+
+	//File extensions to use with Rainmeter.
 	"extensions":
 	[
 		"inc",

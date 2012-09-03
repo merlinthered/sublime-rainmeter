@@ -9,8 +9,15 @@
 				"id": "rainmeter",
 				"children":
 				[
-					{"caption": "Indent for Code Folding", "command": "indent_rainmeter"},
-					{"caption": "New Skin...", "command": "new_skin"}
+					{"caption": "Open Skins Folder...", "command": "rainmeter_open_skins_folder"},
+					{"caption": "-"},
+					{"caption": "Refresh Current Skin", "command": "rainmeter_refresh_current_skin"},
+					{"caption": "Refresh Rainmeter", "command": "rainmeter_refresh_config", "args": {"cmd": []}},
+					{"caption": "-"},
+					{"caption": "Indent for Code Folding", "command": "rainmeter_indent"},
+					{"caption": "-"},
+					{"caption": "New Skin File...", "command": "rainmeter_new_skin_file"},
+					{"caption": "New Skin...", "command": "rainmeter_new_skin"}
 				]
 			}
 		]

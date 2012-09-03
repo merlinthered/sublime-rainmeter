@@ -1,10 +1,41 @@
 [
-  { "keys": ["ctrl+alt+i"], "command": "indent_rainmeter",
-	"context": [
-		{"key": "selector", "operator": "equal", "operand": "source.rainmeter"}
-	]	
-  },
   {
-  	"keys": ["ctrl+shift+c"],"command": "color_pick"
+    "keys": ["ctrl+shift+c"],"command": "rainmeter_color_pick"
+  },
+  { "keys": ["ctrl+alt+i"], "command": "rainmeter_indent",
+	  "context": 
+    [
+		  {"key": "selector", "operator": "equal", "operand": "source.rainmeter"}
+	  ]	
+  },
+  { "keys": ["ctrl+alt+o"], "command": "rainmeter_open_paths",
+	  "context": 
+    [
+		  {"key": "selector", "operator": "equal", "operand": "source.rainmeter"}
+	  ]	
+  },
+  
+  //continue comment lines
+  {    
+    "keys": ["enter"], "command": "insert", "args":{"characters": "\n;"},
+    "context":
+    [
+      {"key": "selector", "operator": "equal", "operand": "source.rainmeter"},
+      {"key": "setting.rainmeter_continue_comments", "operator": "equal", "operand": true},
+      {"key": "selection_empty", "operator": "equal", "operand": true, "match_all": true},
+      {"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*;[^;]?", "match_all": true}
+    ]    
+  },
+
+  //continue folding comment lines
+  {    
+    "keys": ["enter"], "command": "insert", "args":{"characters": "\n;;"},
+    "context":
+    [
+      {"key": "selector", "operator": "equal", "operand": "source.rainmeter"},
+      {"key": "setting.rainmeter_continue_comments", "operator": "equal", "operand": true},
+      {"key": "selection_empty", "operator": "equal", "operand": true, "match_all": true},
+      {"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*;;", "match_all": true}
+    ]    
   }
 ]

@@ -1,13 +1,13 @@
 {
 	"selector": "source.rainmeter",
-	"cmd": ["Rainmeter.exe", "!ActivateConfig", "${file/((.*)Rainmeter\\\\Skins\\\\)(.*)\\\\([^\\\\]*)\\..*/$3/i}", "$file_name", "&&", "Rainmeter.exe", "!Refresh", "${file/((.*)Rainmeter\\\\Skins\\\\)(.*)\\\\([^\\\\]*)\\..*/$3/i}"],
-	"path": "C:\\Program Files\\Rainmeter",
-	"shell": true,
+	"target": "rainmeter_refresh_config",
+	"cmd": ["$file"],
 	
-	"variants": [		
+	"variants":
+	[
 		{
-			"cmd": ["Rainmeter.exe", "!RefreshApp"],
-			"name": "Run"
+			"name": "Run",
+			"cmd": []
 		}
 	]
 }
