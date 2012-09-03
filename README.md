@@ -39,10 +39,8 @@ You can see all available snippets by looking in the *Snippets* folder in the
 Rainmeter package directory. If you feel that one of those snippets needs to
 be changed in order to be more useful, don't hesitate to contact me.
 
-## Tools
-
 <a name='AutomaticIndentation'></a>
-### Code Folding
+## Code Folding
 
 ![Code Folding][im4]
 
@@ -57,7 +55,7 @@ This is useful if you want to fold a specific section of code, like all
 measures or meters. If you want to add a nice looking header for your foldable
 sections, try typing `divider` and hitting enter.
 
-### Color Picker
+## Color Picker
 
 ![Color Picker][im5]
 
@@ -71,7 +69,7 @@ currently not in a color definition, the hex code will be inserted at the
 cursor position. You can't adjust the alpha value, but it will be preserved
 after you chose the new color.
 
-### New Skin
+## New Skin
 
 ![Tools Menu][im6]
 
@@ -90,7 +88,7 @@ If you just want to create a new ini file, try the "New Skin File" command. It
 will just open a new buffer and insert the skin skeleton. The same skeleton is
 also available as a snippet called `tskin`.
 
-### Refresh Skin/Rainmeter
+## Refresh Skin/Rainmeter
 
 You can refresh the current skin by hitting `f7` or `ctrl+b`. The same command
 is also available via the "Tools" menu or the command palette. If the skin is
@@ -101,13 +99,13 @@ settings (see [Configuration](#configuration) for more info).
 If you want to refresh Rainmeter itself, hit `ctrl+shift+b` or select "Tools >
 Rainmeter > Refresh Rainmeter".
 
-### Open Skins Folder
+## Open Skins Folder
 
 You can open your skins folder by selecting "Tools > Rainmeter > Open Skins
 Folder..." or running the "Rainmeter: Open Skins Folder" command from the
 command palette.
 
-### Opening Paths in Rainmeter Files
+## Open Paths in Rainmeter Files
 
 ![Open Paths][im8]
 
@@ -166,8 +164,8 @@ packages and update them automatically.
 
 If you have Package Control installed, open the command palette
 (`ctrl+shift+p`) and run the "Package Control: Install Package" command. Type
-in "Rainmeter" and hit enter. The package will now be installed and updated
-automatically.
+in "Rainmeter" and hit enter. The package will now be installed and kept up-
+to-date automatically.
 
 ### Using Git
 
