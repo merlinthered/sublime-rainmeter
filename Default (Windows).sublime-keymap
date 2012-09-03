@@ -21,6 +21,7 @@
     "context":
     [
       {"key": "selector", "operator": "equal", "operand": "source.rainmeter"},
+      {"key": "auto_complete_visible", "operator": "equal", "operand": false},
       {"key": "setting.rainmeter_continue_comments", "operator": "equal", "operand": true},
       {"key": "selection_empty", "operator": "equal", "operand": true, "match_all": true},
       {"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*;[^;]?", "match_all": true}
@@ -33,6 +34,7 @@
     "context":
     [
       {"key": "selector", "operator": "equal", "operand": "source.rainmeter"},
+      {"key": "auto_complete_visible", "operator": "equal", "operand": false},
       {"key": "setting.rainmeter_continue_comments", "operator": "equal", "operand": true},
       {"key": "selection_empty", "operator": "equal", "operand": true, "match_all": true},
       {"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*;;", "match_all": true}
