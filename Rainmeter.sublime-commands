@@ -6,5 +6,5 @@
 	{"caption": "Rainmeter: Open Skins Folder", "command": "rainmeter_open_skins_folder"},
 	{"caption": "Rainmeter: Pick Color", "command": "rainmeter_color_pick"},
 	{"caption": "Rainmeter: Refresh Current Skin", "command": "rainmeter_refresh_current_skin"},
-	{"caption": "Rainmeter: Refresh Rainmeter", "command": "rainmeter_refresh_config", "args": {"cmd": []}}
+	{"caption": "Rainmeter: Refresh Rainmeter", "command": "rainmeter_refresh"}
 ]

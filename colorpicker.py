@@ -43,7 +43,7 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
         start_color_osx = None
         start_color_win = 0x000000
 
-        # get the currently selected color - if any
+        # Get the currently selected color - if any
         if len(sel) > 0:
             selected = self.view.substr(self.view.word(sel[0])).strip()
             if selected.startswith('#'): selected = selected[1:]
@@ -79,7 +79,10 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
 
 
         elif sublime.platform() == 'osx':
-            location = os.path.join(sublime.packages_path(), 'Rainmeter', 'lib', 'osx_colorpicker')
+            location = os.path.join(sublime.packages_path(), 
+                                    'Rainmeter', 
+                                    'lib', 
+                                    'osx_colorpicker')
             args = [location]
 
             if not os.access(location, os.X_OK):
@@ -90,7 +93,10 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
                 args.append(start_color_osx)
 
         else:
-            location = os.path.join(sublime.packages_path(), 'Rainmeter', 'lib', 'linux_colorpicker.py')
+            location = os.path.join(sublime.packages_path(), 
+                                    'Rainmeter', 
+                                    'lib', 
+                                    'linux_colorpicker.py')
             args = [location]
 
             if not os.access(location, os.X_OK):
@@ -105,16 +111,16 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
             color = proc.communicate()[0].strip()
 
         if color:
-            # replace all regions with color
+            # Replace all regions with color
             for region in sel:
                 word = self.view.word(region)
-                # if the selected word is a valid color, replace it
+                # If the selected word is a valid color, replace it
                 if self.__is_valid_hex_color(self.view.substr(word)):
                     if len(self.view.substr(word)) > 6:
                         word = sublime.Region(word.a, word.a + 6)                    
-                    # include '#' if present
+                    # Include '#' if present
                     self.view.replace(edit, word, color)
-                #if the selected region starts with a #, keep it
+                # If the selected region starts with a #, keep it
                 elif self.view.substr(region).startswith('#'):
                     reduced = sublime.Region(region.begin() + 1, region.end()) 
                     if self.__is_valid_hex_color(self.view.substr(reduced)):
@@ -123,7 +129,7 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
                         self.view.replace(edit, reduced, color)
                     else:
                         self.view.replace(edit, region, '#' + color)
-                # otherwise just replace the selected region
+                # Otherwise just replace the selected region
                 else:
                     self.view.replace(edit, region, color)
    
@@ -148,7 +154,11 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
         except ValueError:
             return False
 
-    def __bgr_to_hexstr(self, bgr, byte_table=list(map(lambda b: '{0:02X}'.format(b), range(256)))):
+    def __bgr_to_hexstr(self, 
+                        bgr, 
+                        byte_table=list(map(lambda b: '{0:02X}'.format(b), 
+                                            range(256)))
+                        ):
         # 0x00BBGGRR
         b = byte_table[(bgr >> 16) & 0xff]
         g = byte_table[(bgr >>  8) & 0xff]
@@ -157,7 +167,8 @@ class RainmeterColorPickCommand(sublime_plugin.TextCommand):
 
     def __hexstr_to_bgr(self, hexstr):
         if len(hexstr) == 3:
-            hexstr = hexstr[0] + hexstr[0] + hexstr[1] + hexstr[1] + hexstr[2] + hexstr[2]
+            hexstr = hexstr[0] + hexstr[0] + hexstr[1] + \
+                     hexstr[1] + hexstr[2] + hexstr[2]
 
         r = int(hexstr[0:2], 16)
         g = int(hexstr[2:4], 16)
