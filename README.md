@@ -224,11 +224,11 @@ Rainmeter is actually refreshed.
 
 ### Setting your Skins Path
 
-Only set the "rainmeter\_skins\_path" setting if "Tools > Rainmeter > Open Skins
-Folder..." does not correctly open your skins folder. The package will try to
-detect your skins folder automatically (including changes to "SkinPath" in
-*Rainmeter.ini*) so it's recommended not to set this setting if everything is
-working fine.
+Only set the "rainmeter\_skins\_path" setting if "Tools > Rainmeter > Open
+Skins Folder..." does not correctly open your skins folder. The package will
+try to detect your skins folder automatically (including changes to "SkinPath"
+in *Rainmeter.ini*) so it's recommended not to set this setting if everything
+is working fine.
 
 <a name="colorschemesettings"></a>
 ### Selecting your Color Scheme
@@ -340,11 +340,11 @@ mean are included there.
 [6]: http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/ "Monokai" 
 [7]: http://www.rainmeter.net/ "Rainmeter"
 
-[im1]: http://i.imgur.com/fXx9t.png "Color Schemes" 
+[im1]: http://i.imgur.com/DKO2x.png "Color Schemes" 
 [im2]: http://i.imgur.com/JZaS6.png "Code Completion" 
 [im3]: http://i.imgur.com/dCAWZ.png "Snippets" 
-[im4]: http://i.imgur.com/SIQgd.png "Code Folding" 
-[im5]: http://i.imgur.com/rLoxa.png "Color Picker" 
+[im4]: http://i.imgur.com/daUtb.png "Code Folding" 
+[im5]: http://i.imgur.com/bvXYL.png "Color Picker" 
 [im6]: http://i.imgur.com/UQp31.png "Tools Menu"
 [im7]: http://i.imgur.com/K82aN.png "Configuration"
-[im8]: http://i.imgur.com/IxR6X.png "Open Paths"
+[im8]: http://i.imgur.com/5MvTc.png "Open Paths"
