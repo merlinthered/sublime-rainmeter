@@ -38,6 +38,7 @@ class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
 			sublime.error_message("Error while trying to create new skin: Directory " + newskinpath + " could not be created. Does it already exist?")
 			return
 
+		#Check which folders should be created
 		settings = sublime.load_settings("Rainmeter.sublime-settings")
 		make_resources = settings.get("rainmeter_new_skin_create_resources_folder", True)
 		make_images = settings.get("rainmeter_new_skin_create_images_folder", True)
@@ -46,18 +47,18 @@ class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
 
 		try:
 			if make_resources: 
-				os.makedirs(basepath + "\\@Resources"),
-				if make_images: 	os.makedirs(basepath + "\\@Resources\\Images")
-				if make_fonts: 		os.makedirs(basepath + "\\@Resources\\Fonts")
-				if make_scripts: 	os.makedirs(basepath + "\\@Resources\\Scripts")
+				os.makedirs(os.path.join(basepath, "@Resources"))
+				if make_images: 	os.makedirs(os.path.join(basepath, "@Resources\\Images"))
+				if make_fonts: 		os.makedirs(os.path.join(basepath, "@Resources\\Fonts"))
+				if make_scripts: 	os.makedirs(os.path.join(basepath, "@Resources\\Scripts"))
 		except os.error:
 			sublime.status_message("Did not create @Resources folder or subfolders because they already exist")
 		
 
 		window = self.window
 		filename = os.path.basename(os.path.normpath(name))
-		open(newskinpath + filename + ".ini", 'a')
-		newview = window.open_file(newskinpath + filename + ".ini")
+		open(os.path.join(newskinpath, filename + ".ini"), 'a')
+		newview = window.open_file(os.path.join(newskinpath, filename + ".ini"))
 		#we have to wait until the file is fully loaded (even if it's empty because it was just created)
 		sublime.set_timeout((lambda: self.openskinfile(newview)), 100)
 
@@ -73,4 +74,4 @@ class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
 		else:
 			view.set_syntax_file("Packages/Rainmeter/Rainmeter.tmLanguage")
 
-		self.window.run_command("refresh_config", {"cmd": []})
+		sublime.run_command("rainmeter_refresh")

@@ -1,6 +1,6 @@
 import sublime, sublime_plugin, getpass, rainmeter
 
-class RainmeterRefreshConfigCommand(sublime_plugin.WindowCommand):
+class RainmeterRefreshConfigCommand(sublime_plugin.ApplicationCommand):
 	"""Refresh the skin at a given file path, or Rainmeter if no path is specified"""
 
 	def run(self, cmd):
@@ -14,7 +14,7 @@ class RainmeterRefreshConfigCommand(sublime_plugin.WindowCommand):
 		#refresh skin (or whole rainmeter if no skin specified)
 		if not cmd:
 			sublime.status_message("Refreshing Rainmeter")
-			self.window.run_command("exec", {"cmd": [rainmeter_exe, "!RefreshApp"]})
+			sublime.active_window().run_command("exec", {"cmd": [rainmeter_exe, "!RefreshApp"]})
 		else:
 			config = rainmeter.get_current_config(cmd[0])
 			fil = rainmeter.get_current_file(cmd[0])
@@ -29,12 +29,18 @@ class RainmeterRefreshConfigCommand(sublime_plugin.WindowCommand):
 			activate = settings.get("rainmeter_refresh_and_activate", True)
 
 			if activate:
-				self.window.run_command("exec", {"cmd": [rainmeter_exe, "!ActivateConfig", config, fil, "&&", rainmeter_exe, "!Refresh", config], "shell": True})
+				sublime.active_window().run_command("exec", {"cmd": [rainmeter_exe, "!ActivateConfig", config, fil, "&&", rainmeter_exe, "!Refresh", config], "shell": True})
 			else:
-				self.window.run_command("exec", {"cmd": [rainmeter_exe, "!Refresh", config]})
+				sublime.active_window().run_command("exec", {"cmd": [rainmeter_exe, "!Refresh", config]})
 
 	def description(self):
 		return "Refresh Rainmeter Config"
+
+class RainmeterRefreshCommand(sublime_plugin.ApplicationCommand):
+	"""Refresh Rainmeter"""
+
+	def run(self):
+		sublime.run_command("rainmeter_refresh_config", {"cmd": []})
 
 class RainmeterRefreshCurrentSkinCommand(sublime_plugin.TextCommand):
 	"""Refresh the current skin file opened in a view"""
@@ -46,7 +52,7 @@ class RainmeterRefreshCurrentSkinCommand(sublime_plugin.TextCommand):
 		if not filepath: return
 		
 		#refresh config
-		self.view.window().run_command("rainmeter_refresh_config", {"cmd": [filepath]})
+		sublime.run_command("rainmeter_refresh_config", {"cmd": [filepath]})
 
 	def is_enabled(self):
 

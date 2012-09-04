@@ -22,7 +22,8 @@
 	"rainmeter_refresh_and_activate": true,
 
 	//Determines if the "New Skin..." command will also create an
-	//@Resources folder in the root config path of the new skin
+	//@Resources folder in the root config path of the new skin, if it doesn't
+	//exist yet
 	"rainmeter_new_skin_create_resources_folder": true,
 
 	//Determines which subfolders of @Resources the "New Skin..." command 
