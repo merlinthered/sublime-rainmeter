@@ -38,11 +38,18 @@ class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
 			sublime.error_message("Error while trying to create new skin: Directory " + newskinpath + " could not be created. Does it already exist?")
 			return
 
+		settings = sublime.load_settings("Rainmeter.sublime-settings")
+		make_resources = settings.get("rainmeter_new_skin_create_resources_folder", True)
+		make_images = settings.get("rainmeter_new_skin_create_images_folder", True)
+		make_fonts = settings.get("rainmeter_new_skin_create_fonts_folder", True)
+		make_scripts = settings.get("rainmeter_new_skin_create_scripts_folder", True)
+
 		try:
-			os.makedirs(basepath + "\\@Resources"),
-			os.makedirs(basepath + "\\@Resources\\Images")
-			os.makedirs(basepath + "\\@Resources\\Fonts")
-			os.makedirs(basepath + "\\@Resources\\Scripts")
+			if make_resources: 
+				os.makedirs(basepath + "\\@Resources"),
+				if make_images: 	os.makedirs(basepath + "\\@Resources\\Images")
+				if make_fonts: 		os.makedirs(basepath + "\\@Resources\\Fonts")
+				if make_scripts: 	os.makedirs(basepath + "\\@Resources\\Scripts")
 		except os.error:
 			sublime.status_message("Did not create @Resources folder or subfolders because they already exist")
 		

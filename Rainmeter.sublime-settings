@@ -21,6 +21,17 @@
 	//not loaded to be activated when you refresh them.
 	"rainmeter_refresh_and_activate": true,
 
+	//Determines if the "New Skin..." command will also create an
+	//@Resources folder in the root config path of the new skin
+	"rainmeter_new_skin_create_resources_folder": true,
+
+	//Determines which subfolders of @Resources the "New Skin..." command 
+	//will create. Only relevant if "rainmeter_new_skin_create_resources_folder"
+	//is set to true.
+	"rainmeter_new_skin_create_images_folder": true,
+	"rainmeter_new_skin_create_fonts_folder": true,
+	"rainmeter_new_skin_create_scripts_folder": true,
+
 	//The maximum number of lines to open with the "Open Selected Paths..."
 	//command without warning about too many selected lines.
 	"rainmeter_max_open_lines": 40,
@@ -47,6 +58,9 @@
 	//Determines if comments will automatically be continued on the next line
 	//when you hit enter in a comment line
 	"rainmeter_continue_comments": true,
+
+	//Determines wether to output debugging information to the console
+	"rainmeter_enable_logging": false,
 
 	//The color scheme to use for Rainmeter syntax.
 	"color_scheme": "Packages/Rainmeter/Monokai (Rainmeter).tmTheme",

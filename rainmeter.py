@@ -1,6 +1,9 @@
 import sublime, getpass, platform, os, re, io, string, _winreg
 """Module for getting Rainmeter-specific paths"""
 
+def __log(function, string):
+	if log: print "rainmeter." + function + ": " + string
+
 def get_program_path():
 	"""Get the value of the #PROGRAMPATH# variable"""
 
@@ -10,6 +13,7 @@ def get_program_path():
 
 	#If setting is not set, try default location
 	if not rainmeterpath:
+		__log("get_program_path", "rainmeter_path not found in settings. Trying default location.")
 		#Default: "C:\Program Files\Rainmeter"
 		programfiles = os.getenv("PROGRAMFILES")
 		rainmeterpath = programfiles + "\\Rainmeter\\"
@@ -19,8 +23,10 @@ def get_program_path():
 
 	#Check if path exists and contains Rainmeter.exe
 	if not os.path.exists(rainmeterpath + "Rainmeter.exe"): 
-		print "Path to Rainmeter.exe could not be found. Check your \"rainmeter_path\" setting."
+		__log("get_program_path", "Path to Rainmeter.exe could not be found. Check your \"rainmeter_path\" setting.")
 		return
+
+	__log("get_program_path", "Rainmeter found in " + rainmeterpath)
 	return rainmeterpath
 
 def get_program_drive():
@@ -47,12 +53,15 @@ def get_settings_path():
 
 	#Check if Rainmeter.ini is in Rainmeter program directory
 	if os.path.exists(rainmeterpath + "Rainmeter.ini"):
+		__log("get_settings_path", "Rainmeter.ini found in " + rainmeterpath)
 		return rainmeterpath
 	else: #If not, look in %APPDATA%\Rainmeter\
 		appdata = os.getenv("APPDATA")
 		if os.path.exists(appdata + "\\Rainmeter\\Rainmeter.ini"):
+			__log("get_settings_path", "Rainmeter.ini found in " + appdata + "\\Rainmeter\\")
 			return appdata + "\\Rainmeter\\"
 		else:
+			__log("get_settings_path", "Rainmeter.ini could not be located.")
 			return None
 
 
@@ -66,6 +75,7 @@ def get_skins_path():
 	#if it's found, return it
 	#We trust the user to enter something meaningful here and don't check anything.
 	if skinspath: 
+		__log("get_skins_path", "Skins path found in sublime-settings file.")
 		return os.path.normpath(skinspath) + "\\"
 
 	#If it's not set, try to detect it automagically
@@ -94,7 +104,7 @@ def get_skins_path():
 
 	#if skinspath setting was found, return it
 	if match:
-		#print "Skin path found in Rainmeter.ini"
+		__log("get_skins_path", "Skins path found in Rainmeter.ini.")
 		return match.group("skinpath").strip().replace("/", "\\")
 
 	#if it's not found in the settings file, try to guess it
@@ -102,7 +112,7 @@ def get_skins_path():
 	#If program path and setting path are equal, we have a portable installation.
 	#In this case, the Skins folder is inside the rainmeter path
 	if rainmeterpath == settingspath:
-		#print "Skin path found in #PROGRAMPATH# because portable installation"
+		__log("get_skins_path", "Skin path found in #PROGRAMPATH# because portable installation")
 		return rainmeterpath + "Skins\\"
 
 	#If it's not a portable installation, we try looking into the "My Documents" folder
@@ -116,7 +126,7 @@ def get_skins_path():
 		#The path could (and most likely, will) contain environment variables that have to be expanded first
 		pathrep = os.path.expandvars(pathrep)
 		
-		#print "Guessed Skin path from My Documents location in registry"
+		__log("get_skins_path", "Guessed Skin path from My Documents location in registry")
 		return pathrep + "\\Rainmeter\\Skins\\"
 
 	except WindowsError:
@@ -126,18 +136,20 @@ def get_skins_path():
 	try:
 		username = getpass.getuser()
 	except Exception:
-		print "Skins path could not be located. Please set the \"skins_path\" setting in your Rainmeter settings file."
+		__log("get_skins_path", "Skins path could not be located. Please set the \"skins_path\" setting in your Rainmeter settings file.")
 		return
 	else:
 		mydocuments = ""
 		#check if windows version is XP
 		winversion = platform.version()
-		if winversion.startswith("5"):
+		if int(winversion[0]) < 6:
 			mydocuments = "C:\\Documents and Settings\\" + username + "\\My Documents\\"
+			__log("get_skins_path", "Found Windows XP or lower. Skins path assumed to be " + mydocuments + "Rainmeter\\Skins\\")
 		else:
 			mydocuments = "C:\\Users\\" + username + "\\Documents\\"
+			__log("get_skins_path", "Found Windows Vista or higher. Skins path assumed to be " + mydocuments + "Rainmeter\\Skins\\")
 		
-		print "Skin path guessed from user name and Windows version"
+		__log("get_skins_path", "Skin path guessed from user name and Windows version")
 		return mydocuments + "Rainmeter\\Skins\\"
 	
 def get_plugins_path():
@@ -162,7 +174,9 @@ def get_current_path(filepath):
 	filepath = os.path.normpath(filepath)
 
 	skinspath = skins_path
-	if not skinspath or not filepath.startswith(skinspath): return
+	if not skinspath or not filepath.startswith(skinspath): 
+		__log("get_current_path", "current path could not be found because either the skins path could not be found or the current file is not located in the skins path.")
+		return
 
 	if os.path.isfile(filepath): 
 		return os.path.dirname(filepath) + "\\"
@@ -177,7 +191,9 @@ def get_root_config_path(filepath):
 	filepath = os.path.normpath(filepath)
 
 	skinspath = skins_path
-	if not skinspath or not filepath.startswith(skinspath): return
+	if not skinspath or not filepath.startswith(skinspath): 
+		__log("get_root_config_path", "root config path could not be found because either the skins path could not be found or the current file is not located in the skins path.")
+		return
 
 	relpath = os.path.relpath(filepath, skinspath)
 
@@ -191,9 +207,15 @@ def get_current_file(filepath):
 	filepath = os.path.normpath(filepath)
 
 	skinspath = skins_path
-	if not skinspath or not filepath.startswith(skinspath): return
+	if not skinspath or not filepath.startswith(skinspath): 
+		__log("get_current_file", "current file could not be found because either the skins path could not be found or the current file is not located in the skins path.")
+		return
 
-	return os.path.basename(filepath)
+	if os.path.isfile(filepath):
+		return os.path.basename(filepath)
+	else:
+		__log("get_current_file", "specified path is not a file.")
+		return
 
 def get_current_config(filepath):
 	"""Get the value of the #CURRENTCONFIG# variable for the specified path
@@ -203,7 +225,9 @@ def get_current_config(filepath):
 	filepath = os.path.normpath(filepath)
 
 	skinspath = skins_path
-	if not skinspath or not filepath.startswith(skinspath): return
+	if not skinspath or not filepath.startswith(skinspath): 
+		__log("get_current_config", "current config could not be found because either the skins path could not be found or the current file is not located in the skins path.")
+		return
 
 	if os.path.isfile(filepath): filepath = os.path.dirname(filepath)
 
@@ -216,9 +240,10 @@ def get_resources_path(filepath):
 
 	rfp = get_root_config_path(filepath)
 
-	if not rfp: return
+	if not rfp: 
+		return
 
-	return rfp + "@Resources\\"
+	return os.path.join(rfp, "@Resources") + "\\"
 
 def replace_variables(string, filepath):
 	"""Replace Rainmeter built-in variables and Windows environment variables in string.
@@ -299,6 +324,9 @@ def make_path(string, filepath):
 		
 	return
 
+settings = sublime.load_settings("Rainmeter.sublime-settings")
+log = settings.get("rainmeter_enable_logging", False)
+
 #initialize the paths 
 #use these if you don't think the value could have changed since the import of the module)
 program_path = get_program_path()
@@ -307,3 +335,5 @@ settings_path = get_settings_path()
 skins_path = get_skins_path()
 plugins_path = get_plugins_path()
 addons_path = get_addons_path()
+
+
