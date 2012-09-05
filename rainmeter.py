@@ -428,7 +428,7 @@ def make_path(string, filepath):
         
         # if that doesn't work, try relative to skins path 
         # (for #CURRENTCONFIG#)
-        abso = os.path.join(skins_path, norm)
+        abso = os.path.join(skins_path(), norm)
         if os.path.exists(abso): 
             return abso
     # for absolute paths, try opening containing folder if file does not exist  

@@ -178,13 +178,15 @@ class RainmeterOpenPathsCommand(sublime_plugin.TextCommand):
         max_open_lines = settings.get("rainmeter_max_open_lines", 40)
 
         # Refuse if too many lines selected to avoid freezing
-        accept = sublime.ok_cancel_dialog(
+        
+        
+        if len(lines) > max_open_lines:
+            accept = sublime.ok_cancel_dialog(
                         "You are trying to open " + 
                         str(len(lines)) + " lines.\n" + 
                         "That's a lot, and could take some time. Try anyway?")
-        
-        if len(lines) > max_open_lines and not accept:
-            return
+            if not accept:
+                return
 
         found = False
         for linereg in lines:
