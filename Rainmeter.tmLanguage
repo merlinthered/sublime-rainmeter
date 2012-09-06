@@ -47,7 +47,7 @@
 			<key>end</key>
 			<string>^(?=\s*\[)</string>
 			<key>name</key>
-			<string>meta.section.variables.rainmeter</string>
+			<string>meta.variables.section.rainmeter</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -94,6 +94,52 @@
 			<string>entity.name.section.rainmeter</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(?i)^\s*(Format)\s*(=)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.option.predefined.rainmeter</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.option.equal.rainmeter</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Format option lines give formatting literals priority over environment variables</string>
+			<key>end</key>
+			<string>$</string>
+			<key>name</key>
+			<string>meta.format.string.rainmeter</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>comment</key>
+					<string>String format placeholder</string>
+					<key>match</key>
+					<string>%[0-9]+</string>
+					<key>name</key>
+					<string>constant.language.format.rainmeter</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Formatting strings for time formats</string>
+					<key>match</key>
+					<string>(![0-9]*i!)|(%#?[aAbBcdHljmMpSUwWxXyYzZ])</string>
+					<key>name</key>
+					<string>constant.language.format.rainmeter</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>Rainmeter builtin variables</string>
 			<key>match</key>
@@ -103,9 +149,17 @@
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>Escaped variables (must be before normal ones to override them)</string>
+			<key>match</key>
+			<string>#\*[^#\s]+?\*#</string>
+			<key>name</key>
+			<string>meta.text.rainmeter</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>Normal variables</string>
 			<key>match</key>
-			<string>#(?![*][^#\s]+[*])[^#\s]+?#</string>
+			<string>#[^#\s]+?#</string>
 			<key>name</key>
 			<string>variable.other.static.rainmeter</string>
 		</dict>
@@ -113,7 +167,7 @@
 			<key>comment</key>
 			<string>Environment variables</string>
 			<key>match</key>
-			<string>%[A-Za-z][0-9a-zA-Z_]*?%</string>
+			<string>%[A-Za-z][0-9a-zA-Z_]+?%</string>
 			<key>name</key>
 			<string>variable.other.env.rainmeter</string>
 		</dict>
@@ -140,6 +194,14 @@
 			<string>(?i)!((SetClip)|(SetWallpaper)|(About)|(Manage)|(Log)|(LsBoxHook)|(ResetStats)|(TrayMenu)|(RefreshApp)|(Quit)|(SetOption(Group)?)|(WriteKeyValue)|(SetVariable(Group)?)|(Toggle(Group|Config)?)|(Move(Meter)?)|(DeactivateConfig(Group)?)|(ActivateConfig)|(Refresh(Group)?)|(Redraw(Group)?)|(SetTransparency(Group)?)|((Show|Hide|Toggle)Fade(Group)?)|((Show|Hide|Toggle|Add|Remove)Blur)|(Draggable(Group)?)|(ZPos(Group)?)|(KeepOnScreen(Group)?)|(ClickThrough(Group)?)|(SnapEdges(Group)?)|(SkinMenu)|((Show|Hide|Toggle|Update)Meter(Group)?)|(((Dis|En)able|Toggle|Update)Measure(Group)?)|(CommandMeasure)|((Show|Hide)(Group)?|(Update)))\b</string>
 			<key>name</key>
 			<string>support.function.bang.rainmeter</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Escaped dynamic sections (must be before normal ones to override them)</string>
+			<key>match</key>
+			<string>\[\*[^\[\]\s]+?\*\]</string>
+			<key>name</key>
+			<string>meta.text.rainmeter</string>
 		</dict>
 		<dict>
 			<key>captures</key>
