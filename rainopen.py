@@ -18,7 +18,13 @@ defexts = defexts.strip().strip(r"|").strip()
 addexts = settings.get("rainmeter_open_sublime_extensions", "")
 addexts = addexts.strip().strip(r"|").strip()
 
-sublime_files = re.compile(r"(?i).*\.(" + addexts + "|" + defexts + r")\b")
+sublime_files = re.compile("(?i).*\\.(" + addexts + "|" + defexts + ")\\b")
+
+log = settings.get("rainmeter_enable_logging", False)
+
+def _log(function, string):
+    if log: 
+        print "rainmeter." + function + ": " + string
 
 
 def open_path(path, transient=False):
@@ -80,6 +86,7 @@ class TryOpenThread(threading.Thread):
         # 1. Selected text
         selected = self.line[self.region.a:self.region.b]
         if self.opn(selected): 
+            _log("TryOpenThread.run", "Open selected text")
             return
 
         # 2. String enclosed in double quotes
@@ -89,7 +96,7 @@ class TryOpenThread(threading.Thread):
         while lastquote >= 0 and self.line[lastquote] != "\"":
             lastquote = lastquote - 1
 
-        if not lastquote <= 0 and self.line[lastquote] == "\"":
+        if not lastquote < 0 and self.line[lastquote] == "\"":
             # Find the quote after the current point (if any)
             nextquote = self.region.b
             while nextquote == len(self.line) or self.line[nextquote] != "\"":
@@ -99,17 +106,25 @@ class TryOpenThread(threading.Thread):
                     and self.line[nextquote] == "\"":
                 string = self.line[lastquote : nextquote].strip("\"")
                 if self.opn(string):
+                    _log("TryOpenThread.run", "Open string enclosed " +
+                         "in quotes: " + string)
                     return
 
         # 3. Region from last whitespace to next whitespace
 
         # Find the space before the current point (if any)
         lastspace=self.region.a-1
-        while lastspace >= 0 and self.line[lastspace] != " " \
+        while lastspace >= 0 \
+                and self.line[lastspace] != " " \
                 and self.line[lastspace] != "\t":
             lastspace = lastspace - 1
 
-        if lastspace <= 0 or self.line[lastspace] == " " \
+        # Set to zero if nothing was found until the start of the line
+        if lastspace < 0:
+            lastspace = 0
+
+        if lastspace == 0 \
+                or self.line[lastspace] == " " \
                 or self.line[lastspace] == "\t":
             # Find the space after the current point (if any)
             nextspace = self.region.b
@@ -123,19 +138,23 @@ class TryOpenThread(threading.Thread):
                     or self.line[nextspace] == "\t":
                 string = self.line[lastspace : nextspace].strip()
                 if self.opn(string):
+                    _log("TryOpenThread.run", "Open string enclosed " +
+                         "in whitespace: " + string)
                     return
 
         # 4. Everything after the first \"=\" until the end 
         # of the line (strip quotes)
         mtch = re.search(r"=\s*(.*)\s*$", self.line)
         if mtch and self.opn(mtch.group(1).strip("\"")): 
+            _log("TryOpenThread.run", "Open text after \"=\": " + 
+                 mtch.group(1).strip("\""))
             return
 
         # 5. Whole line (strip comment character at start)
         stripmatch = re.search(r"^[ \t;]*?([^ \t;].*)\s*$", self.line)
-        print stripmatch.group(0)
-        print stripmatch.group(1)
         if self.opn(stripmatch.group(1)):
+            _log("TryOpenThread.run", "Open whole line: " + 
+                 stripmatch.group(1))
             return
 
 

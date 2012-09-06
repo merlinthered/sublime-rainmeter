@@ -47,7 +47,7 @@ class RainmeterNewSkinCommand(sublime_plugin.WindowCommand):
                     " of your \"skins_path\" setting.")
             return
 
-        name = os.path.normpath(name) + "\\"
+        name = os.path.normpath(name.strip("\\").strip("/")) + "\\"
 
         # Path where the new ini file will be created
         newskinpath = os.path.join(skinspath, name)
