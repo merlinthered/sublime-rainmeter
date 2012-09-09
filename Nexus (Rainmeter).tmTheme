@@ -145,6 +145,20 @@
 
 		<dict>
 			<key>name</key>
+			<string>Variable definitions in Variables section</string>
+			<key>scope</key>
+			<string>storage.type.variable.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#6D9CBE</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
 			<string>Normal Variables</string>
 			<key>scope</key>
 			<string>variable.other.static.rainmeter</string>

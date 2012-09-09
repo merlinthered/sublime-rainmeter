@@ -64,7 +64,7 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>storage.type.option.rainmeter</string>
+							<string>storage.type.variable.rainmeter</string>
 						</dict>
 						<key>3</key>
 						<dict>

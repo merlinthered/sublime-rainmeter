@@ -69,6 +69,11 @@
 	//Tab size for indentation.
 	"tab_size": 1,
 
+	//This is necessary to prevent Sublime from overriding the 
+	//tab_size setting with some indentation guessed from the 
+	//file you just opened
+	"detect_indentation": false,
+
 	//Use spaces or tabs for indentation?
 	"translate_tabs_to_spaces": true,
 

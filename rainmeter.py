@@ -266,8 +266,8 @@ def get_current_path(filepath):
     skinspath = skins_path()
     if not skinspath or not filepath.startswith(skinspath): 
         _log("get_current_path", "current path could not be found because" +
-             " either the skins path could not be found or the current file is" +
-             " not located in the skins path.")
+             " either the skins path could not be found or the current file" +
+             " is not located in the skins path.")
         return
 
     if os.path.isfile(filepath): 
@@ -293,6 +293,8 @@ def get_root_config_path(filepath):
         return
 
     relpath = os.path.relpath(filepath, skinspath)
+    _log("get_root_config_path", 
+         os.path.join(skinspath, relpath.split("\\")[0]) + "\\")
 
     return os.path.join(skinspath, relpath.split("\\")[0]) + "\\"
 
@@ -352,7 +354,7 @@ def get_resources_path(filepath):
 
     if not rfp: 
         return
-
+    _log("get_resources_path", os.path.join(rfp, "@Resources") + "\\")
     return os.path.join(rfp, "@Resources") + "\\"
 
 

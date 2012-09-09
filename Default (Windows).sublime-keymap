@@ -39,5 +39,19 @@
       {"key": "selection_empty", "operator": "equal", "operand": true, "match_all": true},
       {"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*;;", "match_all": true}
     ]    
+  },
+
+  //indent line after section header
+  {    
+    "keys": ["enter"], "command": "insert", "args":{"characters": "\n\t"},
+    "context":
+    [
+      {"key": "selector", "operator": "equal", "operand": "source.rainmeter"},
+      {"key": "auto_complete_visible", "operator": "equal", "operand": false},
+      {"key": "setting.auto_indent", "operator": "equal", "operand": true},
+      {"key": "setting.smart_indent", "operator": "equal", "operand": true},
+      {"key": "selection_empty", "operator": "equal", "operand": true, "match_all": true},
+      {"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*\\[\\s*[^\\[\\]\\s]*\\s*\\]\\s*$", "match_all": true}
+    ]    
   }
 ]

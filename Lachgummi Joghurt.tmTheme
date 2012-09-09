@@ -103,7 +103,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>Predefined Keys</string>
+			<string>Include Statements</string>
 			<key>scope</key>
 			<string>storage.type.option.predefined.include.rainmeter</string>
 			<key>settings</key>
@@ -126,6 +126,20 @@
 				<string></string>
 				<key>foreground</key>
 				<string>#f47676</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Variable definitions in Variables section</string>
+			<key>scope</key>
+			<string>storage.type.variable.rainmeter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#ffad73</string>
 			</dict>
 		</dict>
 
