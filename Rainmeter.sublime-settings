@@ -77,6 +77,10 @@
 	//Use spaces or tabs for indentation?
 	"translate_tabs_to_spaces": true,
 
+	//Automatically indent lines based on the context?
+	//(e.g. after typing a section head and hitting enter)
+	"smart_indent": false,
+
 	//File extensions to use with Rainmeter.
 	"extensions":
 	[
