@@ -255,7 +255,7 @@ but will probably yield sub-optimal results.
 The syntax definition tries to capture all common language constructs
 properly. It might fail in some cases, where something is highlighted even
 though it's not supposed to be. One prominent example is that every number
-that has exactly 6 or 8 digits being highlighted like a hexadecimal color
+that has exactly 6 or 8 digits is being highlighted like a hexadecimal color
 definition. I chose this explicitly because I think identifying the different
 parts in a color definition is more important than some incorrectly colored
 numbers. In most other cases, wrong highlighting is due to the inherent
