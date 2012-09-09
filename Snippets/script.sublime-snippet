@@ -3,7 +3,7 @@
 [Measure${1:Script}]
 	Measure=Script
 	ScriptFile=${2:#@#Scripts\\${3:Script}.lua}
-		]]></content>
+	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tscript</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

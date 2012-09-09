@@ -3,7 +3,7 @@
 [Measure${1:Time}]
 	Measure=Time
 	Format=${2:"%H:%M:%S"}
-		]]></content>
+	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>ttime</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

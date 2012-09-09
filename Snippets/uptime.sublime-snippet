@@ -3,7 +3,7 @@
 [Measure${1:UpTime}]
 	Measure=UpTime
 	Format=${2:"%4!i!d %3!i!:%2!02i!"}
-		]]></content>
+	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tuptime</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

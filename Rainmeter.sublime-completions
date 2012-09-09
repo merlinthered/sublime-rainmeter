@@ -299,6 +299,7 @@
             "Tile",
             "Timeout",
             "TimeoutValue",
+            "TimeStamp",
             "TimeZone",
             "ToolTipHidden",
             "ToolTipIcon",
