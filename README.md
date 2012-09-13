@@ -348,7 +348,7 @@ mean are included there.
 [6]: http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/ "Monokai" 
 [7]: http://www.rainmeter.net/ "Rainmeter"
 
-[im1]: http://i.imgur.com/DKO2x.png "Color Schemes" 
+[im1]: http://i.imgur.com/xELSn.png "Color Schemes" 
 [im2]: http://i.imgur.com/JZaS6.png "Code Completion" 
 [im3]: http://i.imgur.com/dCAWZ.png "Snippets" 
 [im4]: http://i.imgur.com/daUtb.png "Code Folding" 
