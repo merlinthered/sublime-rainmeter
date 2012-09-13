@@ -50,6 +50,14 @@
                                     "file": "${packages}/User/Rainmeter.sublime-settings"
                                 },
                                 "caption": "Settings – User"
+                            },
+                            {"caption": "-"},
+                            {
+                                "command": "open_file", "args":
+                                {
+                                    "file": "${packages}/Rainmeter/Default (Windows).sublime-keymap"
+                                },
+                                "caption": "Key Bindings – Default"
                             }
 						]
 					}

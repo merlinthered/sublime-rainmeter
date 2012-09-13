@@ -214,7 +214,7 @@ must have an opening curly brace at the top, and a closing one at the bottom.
 Also, all settings except the last one must be terminated with a comma or
 Sublime will throw error dialogs at you.
 
-### Setting your Rainmeter Path
+### Setting Your Rainmeter Path
 
 If your Rainmeter is not installed in *C:\\Program Files\\Rainmeter* you
 should change the "rainmeter_path" setting to the path where you installed
@@ -222,7 +222,7 @@ Rainmeter. You can check if you set it correctly by selecting "Refresh
 Rainmeter" from the "Rainmeter" section in the "Tools" menu and seeing if
 Rainmeter is actually refreshed.
 
-### Setting your Skins Path
+### Setting Your Skins Path
 
 Only set the "rainmeter\_skins\_path" setting if "Tools > Rainmeter > Open
 Skins Folder..." does not correctly open your skins folder. The package will
@@ -231,7 +231,7 @@ in *Rainmeter.ini*) so it's recommended not to set this setting if everything
 is working fine.
 
 <a name="colorschemesettings"></a>
-### Selecting your Color Scheme
+### Selecting Your Color Scheme
 
 There are several built-in color schemes you can choose from. If you don't
 want to use the default color scheme "Monokai (Rainmeter)", you can select a
@@ -247,6 +247,13 @@ The following color schemes are currently included in the package:
 
 Using other color schemes that are not optimized for Rainmeter is possible,
 but will probably yield sub-optimal results.
+
+### Customizing Your Key Bindings
+
+If you don't like the key bindings the package provides by default you can
+define your own. Look at "Preferences > Package Settings > Rainmeter > Key
+Bindings - Default" to see how the key bindings are defined. You can add your
+own by editing "Preferences > Key Bindings - User".
 
 # Additional Information
 
@@ -310,6 +317,7 @@ mean are included there.
 
 * Preferences > Package Settings > Rainmeter > Settings - Default
 * Preferences > Package Settings > Rainmeter > Settings - User
+* Preferences > Package Settings > Rainmeter > Key Bindings - Default
 * Tools > Rainmeter > Indent for Code Folding
 * Tools > Rainmeter > New Skin File...
 * Tools > Rainmeter > New Skin...
