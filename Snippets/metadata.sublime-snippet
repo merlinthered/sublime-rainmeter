@@ -1,10 +1,11 @@
 <snippet>
 	<content><![CDATA[
 [Metadata]
-	Name=${1:${TM_FILEPATH/.*Rainmeter\/Skins\/(.*)\/[^\/]*.ini/$1/i}}
-	Version=${2:0}
-	Information=$3
-	License=${4:Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported}
+	Author=${1:${TM_FULLNAME}}
+	Name=${2:${TM_FILEPATH/.*Rainmeter\/Skins\/(.*)\/[^\/]*.ini/$1/i}}
+	Version=${3:0}
+	Information=$4
+	License=${5:Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tmetadata</tabTrigger>

@@ -1,9 +1,8 @@
 <snippet>
 	<content><![CDATA[
 [Rainmeter]
-	Author=${1:${TM_FULLNAME}}
-	Update=${2:1000}
-	MiddleMouseUpAction=${3:!Refresh #CURRENTCONFIG#}
+	Update=${1:1000}
+	MiddleMouseUpAction=${2:!Refresh #CURRENTCONFIG#}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>trainmeter</tabTrigger>
