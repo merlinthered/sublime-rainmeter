@@ -67,7 +67,7 @@
                 {
                     "name": "constant.language.format.rainmeter",
                     "comment": "Formatting strings for time formats",
-                    "match": "(![0-9]*i!)|(%#?[aAbBcdHljmMpSUwWxXyYzZ])"
+                    "match": "(![0-9]*i!)|(%#?[aAbBcdHIjmMpSUwWxXyYzZ])"
                 },
                 {
                     "include": "$self"

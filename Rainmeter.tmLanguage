@@ -129,7 +129,7 @@
 					<key>comment</key>
 					<string>Formatting strings for time formats</string>
 					<key>match</key>
-					<string>(![0-9]*i!)|(%#?[aAbBcdHljmMpSUwWxXyYzZ])</string>
+					<string>(![0-9]*i!)|(%#?[aAbBcdHIjmMpSUwWxXyYzZ])</string>
 					<key>name</key>
 					<string>constant.language.format.rainmeter</string>
 				</dict>
