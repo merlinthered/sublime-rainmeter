@@ -1,0 +1,20 @@
+{
+	"schema_version": "1.2",
+	"packages": [
+		{
+			"name": "Rainmeter",
+			"description": "The description of your package",
+			"author": "merlinthered",
+			"homepage": "http://merlinthered.github.com/sublime-rainmeter/",
+			"last_modified": "2012-11-26 07:36:56",
+			"platforms": {
+				"windows": [
+					{
+						"version": "1.0.0",
+						"url": "https://nodeload.github.com/merlinthered/sublime-rainmeter/zip/1.0.0"
+					}
+				]
+			}
+		}
+	]
+}
