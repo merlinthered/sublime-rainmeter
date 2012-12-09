@@ -3,7 +3,7 @@
 	"packages": [
 		{
 			"name": "Rainmeter",
-			"description": "The description of your package",
+			"description": "Rainmeter Package for Sublime Text 2",
 			"author": "merlinthered",
 			"homepage": "http://merlinthered.github.com/sublime-rainmeter/",
 			"last_modified": "2012-11-26 07:36:56",
