@@ -1,15 +1,15 @@
 <snippet>
 	<content><![CDATA[
-[Measure${1:FolderInfo}]
+[Measure${1:FileView}]
 	Measure=Plugin
-	Plugin=FolderInfo
-	Folder=${2:path\to\folder}
-	InfoType=${3:FileCount}
-	RegExpFilter="${4:(?i).*\.(jpg|png|bmp|gif)}"
+	Plugin=FileView
+	Path=[${2:ParentMeasure}]
+	Type=${3:FileName}
+	Index="${4:1)}"
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>tfolderinfo</tabTrigger>
+	<tabTrigger>tfileviewchild</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.rainmeter</scope>
-	<description>FolderInfo Plugin</description>
+	<description>FileView Child</description>
 </snippet>
