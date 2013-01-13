@@ -5,7 +5,7 @@
 	Plugin=FileView
 	Path=[${2:ParentMeasure}]
 	Type=${3:FileName}
-	Index="${4:1)}"
+	Index=${4:1}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tfileviewchild</tabTrigger>

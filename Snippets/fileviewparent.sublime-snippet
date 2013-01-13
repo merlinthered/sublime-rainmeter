@@ -5,7 +5,7 @@
 	Plugin=FileView
 	Path=${2:path\to\folder}
 	ShowDotDot=${3:0}
-	Count="${4:10)}"
+	Count=${4:10}
 	$0]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tfileviewparent</tabTrigger>
