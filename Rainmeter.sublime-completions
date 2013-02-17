@@ -99,6 +99,8 @@
             "ButtonCommand",
             "ButtonImage",
             "ClipString",
+            "ClipStringH",
+            "ClipStringW",
             "CodePage",
             "ColorMatrix1",
             "ColorMatrix2",
@@ -563,6 +565,11 @@
             "#WORKAREAY#",
             "#WORKAREAY@1#",
             "#WORKAREAY@2#",
+
+            {"trigger": "$MouseX$", "contents": "\\$MouseX\\$"},
+            {"trigger": "$MouseY$", "contents": "\\$MouseY\\$"},
+            {"trigger": "$MouseX:%$", "contents": "\\$MouseX:%\\$"},
+            {"trigger": "$MouseY:%$", "contents": "\\$MouseY:%\\$"},
 
             "HKEY_CURRENT_CONFIG",
             "HKEY_CURRENT_USER",
