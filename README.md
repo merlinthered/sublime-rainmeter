@@ -178,9 +178,9 @@ to-date automatically.
 
 ### Using Git
 
-Browse to your Sublime Text 2 Package folder (*C:\\Users\\\[Your
-Username\]\\AppData\\Roaming\\Sublime Text 2\\Packages* on Windows). Then
-clone the package there using git:
+Browse to your Sublime Text 2 Package folder 
+(<em>C:\\Users\\\[Your Username\]\\AppData\\Roaming\\Sublime Text 2\\Packages</em> on Windows).
+Then clone the package there using git:
 
 	git clone https://github.com/merlinthered/sublime-rainmeter.git Rainmeter
 
@@ -190,13 +190,12 @@ Don't forget to update regularly by running
 
 in the Rainmeter package directory.
 
-### By Downloading sublime-package
+### Manual Installation
 
-Download the .sublime-package file from the [Downloads page][2] and place it
-in your "Installed Packages" directory (*C:\\Users\\\[Your Username\]\\
-AppData\\Roaming\\Sublime Text 2\\Installed Packages*). This download will 
-not be updated as often as the git repo and (and therefore also the Package 
-Control install).
+* Download the latest version from the [Tags page][2] and unzip it.
+* Rename the unzipped folder to "Rainmeter"
+* Drop the unzipped folder into your Sublime Text 2 Package folder 
+  (<em>C:\\Users\\\[Your Username\]\\AppData\\Roaming\\Sublime Text 2\\Packages</em> on Windows)
 
 <a name='configuration'></a>
 # Configuration
@@ -341,7 +340,7 @@ mean are included there.
 * [The Rainmeter Community][7], for being awesome and testing this package.
 
 [1]: http://www.sublimetext.com/ "Sublime Text 2" 
-[2]: https://github.com/merlinthered/sublime-rainmeter/downloads "Downloads page"
+[2]: https://github.com/merlinthered/sublime-rainmeter/tags "Tags page"
 [3]: http://wbond.net/sublime_packages/package_control "Package Control" 
 [4]: https://github.com/weslly/ColorPicker "Color Picker" 
 [5]: https://github.com/poiru/rainlexer "RainLexer" 
