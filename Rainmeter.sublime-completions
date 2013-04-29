@@ -237,6 +237,7 @@
             "OnRefreshAction",
             "OnUnfocusAction",
             "OnUpdateAction",
+            "OnWakeAction",
             "Password",
             "Path",
             "PathName",
