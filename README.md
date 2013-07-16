@@ -192,7 +192,7 @@ in the Rainmeter package directory.
 
 ### Manual Installation
 
-* Download the latest version from the [Bintray site][2] and unzip it.
+* Download the latest version from the [release page][2] and unzip it.
 * Drop the .sublime-package file into your <em>Installed Packages</em> folder
   (<em>C:\\Users\\\[Your Username\]\\AppData\\Roaming\\Sublime Text 2\\Installed Packages</em> on Windows)
 
@@ -339,7 +339,7 @@ mean are included there.
 * [The Rainmeter Community][7], for being awesome and testing this package.
 
 [1]: http://www.sublimetext.com/ "Sublime Text 2" 
-[2]: https://bintray.com/pkg/show/general/merlinthered/sublime-rainmeter/sublime-rainmeter "Bintray page"
+[2]: https://github.com/merlinthered/sublime-rainmeter/releases "Release page"
 [3]: http://wbond.net/sublime_packages/package_control "Package Control" 
 [4]: https://github.com/weslly/ColorPicker "Color Picker" 
 [5]: https://github.com/poiru/rainlexer "RainLexer" 
