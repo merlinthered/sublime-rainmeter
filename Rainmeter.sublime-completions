@@ -57,6 +57,7 @@
 
 
             "@include",
+            "AccurateText",
             "AddDaysToHours",
             "Angle",
             "AntiAlias",
@@ -239,8 +240,10 @@
             "OnUnfocusAction",
             "OnUpdateAction",
             "OnWakeAction",
+            "Padding",
             "Password",
             "PathName",
+            "Paused",
             "Percentual",
             "PerfMonCounter",
             "PerfMonDifference",
@@ -435,7 +438,7 @@
             {"trigger": "!LoadLayout", "contents": "!LoadLayout \"${1:LayoutName}\""},
             {"trigger": "!Log", "contents": "!Log \"${1:Message}\" ${2:\"${3:(ErrorType:(Notice|Error|Warning|Debug))}\"}"},
             {"trigger": "!LsBoxHook", "contents": "!LsBoxHook \"${1:Config}\""},
-            {"trigger": "!Manage", "contents": "!Manage ${1:\"${2:(TabName:(Skins|Themes|Settings))}\"}"},
+            {"trigger": "!Manage", "contents": "!Manage ${1:${2:\"${3:(TabName:(Skins|Themes|Settings))}\"} ${4:\"${5:(Config)}\"} ${6:\"${7:(File)}\"}}"},
             {"trigger": "!Move", "contents": "!Move ${1:X} ${2:Y} ${3:\"${4:(Config)}\"}"},
             {"trigger": "!MoveMeter", "contents": "!MoveMeter \"${1:X}\" \"${2:Y}\" \"${3:Meter}\" ${4:\"${5:(Config)}\"}"},
             {"trigger": "!PauseMeasure", "contents": "!PauseMeasure \"${1:Measure}\" ${2:\"${3:(Config)}\"}"},
