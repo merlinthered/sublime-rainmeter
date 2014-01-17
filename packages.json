@@ -6,12 +6,12 @@
 			"description": "Rainmeter Package for Sublime Text 2",
 			"author": "merlinthered",
 			"homepage": "http://merlinthered.github.com/sublime-rainmeter/",
-			"last_modified": "2013-09-14 09:00:00",
+			"last_modified": "2014-01-17 20:25:00",
 			"platforms": {
 				"windows": [
 					{
-						"version": "1.0.6",
-						"url": "https://nodeload.github.com/merlinthered/sublime-rainmeter/zip/1.0.6"
+						"version": "1.0.7",
+						"url": "https://nodeload.github.com/merlinthered/sublime-rainmeter/zip/1.0.7"
 					}
 				]
 			}
